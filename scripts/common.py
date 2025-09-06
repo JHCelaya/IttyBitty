@@ -34,3 +34,11 @@ STRUCTURE_PROMPT = (
 
 def sanitize(name: str) -> str:
     return re.sub(r"[^a-zA-Z0-9._-]+", "_", name)
+
+
+def load_model(model_id: str, use_fast: bool = True):
+    """Load tokenizer and model once for a given model_id."""
+    tok = AutoTokenizer.from_pretrained(model_id, use_fast=use_fast)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
+    model.eval()
+    return tok, model
