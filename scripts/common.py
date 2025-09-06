@@ -31,3 +31,6 @@ STRUCTURE_PROMPT = (
     "- Background:\n- Methods:\n- Results:\n- Conclusions:\n"
     "Be concise and strictly use facts from the text.\nTEXT:\n"
 )
+
+def sanitize(name: str) -> str:
+    return re.sub(r"[^a-zA-Z0-9._-]+", "_", name)
