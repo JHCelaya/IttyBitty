@@ -24,3 +24,10 @@ DEFAULT_MODELS = [
     "facebook/bart-large-cnn",
     "allenai/led-base-16384",
 ]
+
+
+STRUCTURE_PROMPT = (
+    "Summarize the following scientific content into a structured abstract with these fields:\n"
+    "- Background:\n- Methods:\n- Results:\n- Conclusions:\n"
+    "Be concise and strictly use facts from the text.\nTEXT:\n"
+)
