@@ -46,3 +46,16 @@ def load_model(model_id: str, use_fast: bool = True):
 def _chunk_token_ids(ids, max_len: int):
     for i in range(0, len(ids), max_len):
         yield ids[i:i+max_len]
+
+def summarize_text_with(
+    tok,
+    model,
+    text: str,
+    structured: bool = True,
+    max_in_tokens: int = 1024,
+    max_out_tokens: int = 256,
+    num_beams: int = 4,
+) -> str:
+    """Hierarchical summarization if input exceeds max_in_tokens."""
+    if structured:
+        text = STRUCTURE_PROMPT + text
