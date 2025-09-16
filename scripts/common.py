@@ -42,3 +42,7 @@ def load_model(model_id: str, use_fast: bool = True):
     model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
     model.eval()
     return tok, model
+
+def _chunk_token_ids(ids, max_len: int):
+    for i in range(0, len(ids), max_len):
+        yield ids[i:i+max_len]
