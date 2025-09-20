@@ -85,3 +85,11 @@ def summarize_text_with(
     with torch.no_grad():
         out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
     return tok.decode(out[0], skip_special_tokens=True)
+
+
+def process_pdf(pdf_path: Path, max_sections: int = 5) -> str:
+    """Extract text, split into sections, stitch preferred sections."""
+    raw = extract_text_by_page(str(pdf_path))
+    sections = split_into_sections(raw)
+    stitched = stitch_sections(sections, max_sections=max_sections)
+    return stitched or raw
