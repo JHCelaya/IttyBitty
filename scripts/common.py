@@ -59,3 +59,29 @@ def summarize_text_with(
     """Hierarchical summarization if input exceeds max_in_tokens."""
     if structured:
         text = STRUCTURE_PROMPT + text
+    
+    # Tokenize without truncation to decide chunking
+    ids = tok(text, return_tensors="pt", truncation=False).input_ids[0]
+    if len(ids) <= max_in_tokens:
+        enc = tok(text, return_tensors="pt", truncation=True)
+        with torch.no_grad():
+            out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
+        return tok.decode(out[0], skip_special_tokens=True)
+    
+    
+    # Hierarchical: chunk -> summarize chunks -> summarize the summaries
+    chunk_summaries: List[str] = []
+    for piece in _chunk_token_ids(ids, max_in_tokens):
+        chunk_text = tok.decode(piece, skip_special_tokens=True)
+        if structured:
+            chunk_text = STRUCTURE_PROMPT + chunk_text
+        enc = tok(chunk_text, return_tensors="pt", truncation=True)
+        with torch.no_grad():
+            out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
+        chunk_summaries.append(tok.decode(out[0], skip_special_tokens=True))
+
+    combined = "\n".join(chunk_summaries)
+    enc = tok(combined, return_tensors="pt", truncation=True)
+    with torch.no_grad():
+        out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
+    return tok.decode(out[0], skip_special_tokens=True)
