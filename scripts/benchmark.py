@@ -19,3 +19,9 @@ STRUCTURE_PROMPT = (
     "- Background:\n- Methods:\n- Results:\n- Conclusions:\n"
     "Be concise and strictly use facts from the text.\nTEXT:\n"
 )
+
+def load_model(model_id: str, use_fast: bool) -> tuple:
+    tok = AutoTokenizer.from_pretrained(model_id, use_fast=use_fast)
+    model = AutoModelForSeq2SeqLM.from_pretrained(model_id)
+    model.eval()
+    return tok, model
