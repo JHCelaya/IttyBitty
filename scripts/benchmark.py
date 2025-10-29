@@ -30,3 +30,26 @@ def load_model(model_id: str, use_fast: bool) -> tuple:
 def _chunk(ids, max_len: int):
     for i in range(0, len(ids), max_len):
         yield ids[i:i+max_len]
+
+
+def summarize_with(tok, model, text: str, structured=True, max_in_tokens=1024, max_out_tokens=256, num_beams=4) -> str:
+    if structured:
+        text = STRUCTURE_PROMPT + text
+    ids = tok(text, return_tensors="pt", truncation=False).input_ids[0]
+    if len(ids) <= max_in_tokens:
+        enc = tok(text, return_tensors="pt", truncation=True)
+        with torch.no_grad():
+            out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
+        return tok.decode(out[0], skip_special_tokens=True)
+    
+    parts: List[str] = []
+    for piece in _chunk(ids, max_in_tokens):
+        chunk_text = tok.decode(piece, skip_special_tokens=True)
+        if structured:
+            chunk_text = STRUCTURE_PROMPT + chunk_text
+        enc = tok(chunk_text, return_tensors="pt", truncation=True)
+        with torch.no_grad():
+            out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
+        parts.append(tok.decode(out[0], skip_special_tokens=True))
+
+        
