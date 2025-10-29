@@ -1,0 +1,902 @@
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 5.4s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (21.0s) :: the hippocampus is one of the most important regions in the brain for memory , learning , and other cognitive functions . <n> it is also one of the most damaged regions in alzheimer s disease ( ad ) . <n> the hippocampus is also one of the most affected regions in ad . in this review <n> , we will focus on the role of the hippocampus in ad . <n> the hippocampus is one of the most important regions in the brain for memory , learning , and other cognitive functions . <n> it is also one of the most damaged regions in ad . <n> the hippocampus is also one of the most affected regions in ad . in thi...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/addiction.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'google/pegasus-arxiv', 'facebook/bart-large-cnn']
+[WARN] Missing PDF: C:\Users\jackc\OneDrive\Desktop\addiction.pdf
+[FATAL] No valid PDFs processed. Aborting.
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'google/pegasus-arxiv', 'facebook/bart-large-cnn']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.9s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 218.0s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 193.3s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (20.0s) :: the hippocampus is one of the most important regions in the brain for memory and learning . <n> the hippocampus has been found to be involved in memory formation , processing , and retrieval . <n> the hippocampus has also been found to be one of the most important brain regions for learning and memory . <n> the hippocampus has been found to be one of the most important brain regions for learning and memory . <n> the hippocampus has been found to be one of the most important brain regions for learning and memory . <n> the hippocampus has been found to be one of the most important brain regions ...
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (20.3s) :: the ability of the hippocampus to support the brain s capacity for physical space has been the subject of research for decades . <n> however , there is still no consensus on the role of the hippocampus in supporting the brain s capacity for physical space . <n> the purpose of this paper is to show that the ability of the hippocampus to support the brain s capacity for physical space has been the subject of research for decades . <n> the role of the hippocampus in supporting the brain s capacity for physical space has been the subject of research for decades . <n> the ability of the hippocampus...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (5.5s) :: The link between the hippocampus and declarative memory began with the famous case of patient H.M., who suffered dense amnesia following removal of the hippocampus. One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the human brain’s capacity to calculate routes for traversing physical space....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.4s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 4.6s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (4.2s) :: The link between the hippocampus and declarative memory began with the famous case of patient H.M., who suffered adense amnesia following removal of the hippocampus. Subsequent studies inrats, non-human primates, and human patients have demonstrated dense amnesia after damage to medial temporal lobe structures....
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (10.7s) :: there have been two general views about role of hippocampus : one of them argues for our ability to retrieve memory for our system supporting the knowledge of both hippocampus and hub system of the brain for traversing physical space lines. other sees the hippocampus system as the system supporting hub system for navigation lines of physical space line. link between the two views emerged largely through the famous case of patient of research, who suffered dense damage of his hippocampus following removal of neighboring regions ( 1957, 1957 ). studies studies studies in human patients, have fol...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (8.8s) :: there have been two views about the hippocampus : one view is that of the hippocampus is critical for our ability to retrieve memory. the other view sees them as specific knowledge, and experiences, which are gained from their hippocampus. in this review , we will discuss the link between these two views....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.4s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 4.5s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.6s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: IndexError('index out of range in self')
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 195, in main
+    summary = summarize_with(
+        tok, model, text,
+    ...<3 lines>...
+        num_beams=args.num_beams,
+    )
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 68, in summarize_with
+    out = model.generate(
+        **enc,
+    ...<6 lines>...
+        repetition_penalty=1.15,
+    )
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\utils\_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\generation\utils.py", line 2422, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+        inputs_tensor, model_kwargs, model_input_name, generation_config
+    )
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\generation\utils.py", line 861, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)  # type: ignore
+                                                   ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\models\bart\modeling_bart.py", line 833, in forward
+    embed_pos = self.embed_positions(input)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\models\bart\modeling_bart.py", line 101, in forward
+    return super().forward(position_ids + self.offset)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\sparse.py", line 192, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\functional.py", line 2546, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index out of range in self
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (341.6s) :: we argue for the role of memory in cognitive processes. we show that the ability of the memory function to retrieve information about the space of space, as well as its ability to create spatial memory, is a key feature of the cognitive process of learning. in this context , we propose a new way of thinking about learning, based on the notion of a memory map, which we call a cognitive memory map ( cmm ), and we show how it can be used to understand the learning process of a cognitive system....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (201.4s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.7s
+[INFO] Loading model: google/pegasus-arxiv
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 4.4s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-arxiv in 4.6s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: IndexError('index out of range in self')
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 195, in main
+    summary = summarize_with(
+        tok, model, text,
+    ...<3 lines>...
+        num_beams=args.num_beams,
+    )
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 68, in summarize_with
+    out = model.generate(
+        **enc,
+    ...<6 lines>...
+        repetition_penalty=1.15,
+    )
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\utils\_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\generation\utils.py", line 2422, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+        inputs_tensor, model_kwargs, model_input_name, generation_config
+    )
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\generation\utils.py", line 861, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)  # type: ignore
+                                                   ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\models\bart\modeling_bart.py", line 833, in forward
+    embed_pos = self.embed_positions(input)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\models\bart\modeling_bart.py", line 101, in forward
+    return super().forward(position_ids + self.offset)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\sparse.py", line 192, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\functional.py", line 2546, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index out of range in self
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Loaded google/pegasus-pubmed in 5.2s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: IndexError('index out of range in self')
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 195, in main
+    summary = summarize_with(
+        tok, model, text,
+    ...<3 lines>...
+        num_beams=args.num_beams,
+    )
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 68, in summarize_with
+    out = model.generate(
+        **enc,
+    ...<6 lines>...
+        repetition_penalty=1.15,
+    )
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\utils\_contextlib.py", line 120, in decorate_context
+    return func(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\generation\utils.py", line 2422, in generate
+    model_kwargs = self._prepare_encoder_decoder_kwargs_for_generation(
+        inputs_tensor, model_kwargs, model_input_name, generation_config
+    )
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\generation\utils.py", line 861, in _prepare_encoder_decoder_kwargs_for_generation
+    model_kwargs["encoder_outputs"]: ModelOutput = encoder(**encoder_kwargs)  # type: ignore
+                                                   ~~~~~~~^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\models\bart\modeling_bart.py", line 833, in forward
+    embed_pos = self.embed_positions(input)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1773, in _wrapped_call_impl
+    return self._call_impl(*args, **kwargs)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\module.py", line 1784, in _call_impl
+    return forward_call(*args, **kwargs)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\transformers\models\bart\modeling_bart.py", line 101, in forward
+    return super().forward(position_ids + self.offset)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\modules\sparse.py", line 192, in forward
+    return F.embedding(
+           ~~~~~~~~~~~^
+        input,
+        ^^^^^^
+    ...<5 lines>...
+        self.sparse,
+        ^^^^^^^^^^^^
+    )
+    ^
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\torch\nn\functional.py", line 2546, in embedding
+    return torch.embedding(weight, input, padding_idx, scale_grad_by_freq, sparse)
+           ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+IndexError: index out of range in self
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 2.3s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 9.8s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 10.0s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (164.6s) :: Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Recent studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. These studies cross the boundaries of the memory and spatial views and offer new insights into how the hippocampus represents memories....
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (526.0s) :: we argue for the role of memory in cognitive processes. we show that the ability of the memory function to retrieve information about the space of space, as well as its ability to create spatial memory, is a key feature of the cognitive process of learning. in this context , we propose a new way of thinking about learning, based on the notion of a memory map, which we call a cognitive memory map ( cmm ), and we show how it can be used to understand the learning process of a cognitive system....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (530.8s) :: we argue for the role of memory in cognitive processes. we show that the ability of the memory function to retrieve information about the space of space, as well as its ability to create spatial memory, is a key feature of the cognitive process of learning. in this context , we propose a new way of thinking about learning, based on the notion of a memory map, which we call a cognitive memory map ( cmm ), and we show how it can be used to understand the learning process of a cognitive system....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (469.9s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (471.0s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/short.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv']
+[WARN] Missing PDF: C:\Users\jackc\OneDrive\Desktop\short.pdf
+[FATAL] No valid PDFs processed. Aborting.
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (604.2s) :: we argue for the role of memory in cognitive processes. we show that the ability of the memory function to retrieve information about the space of space, as well as its ability to create spatial memory, is a key feature of the cognitive process of learning. in this context , we propose a new way of thinking about learning, based on the notion of a memory map, which we call a cognitive memory map ( cmm ), and we show how it can be used to understand the learning process of a cognitive system....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.6s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (229.4s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[OK] Loaded google/pegasus-arxiv in 5.0s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.6s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (98.7s) :: Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Recent studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. These studies cross the boundaries of the memory and spatial views and offer new insights into how the hippocampus represents memories....
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (377.0s) :: we argue for the role of memory in cognitive processes. we show that the ability of the memory function to retrieve information about the space of space, as well as its ability to create spatial memory, is a key feature of the cognitive process of learning. in this context , we propose a new way of thinking about learning, based on the notion of a memory map, which we call a cognitive memory map ( cmm ), and we show how it can be used to understand the learning process of a cognitive system....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (276.3s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/short.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[WARN] Missing PDF: C:\Users\jackc\OneDrive\Desktop\short.pdf
+[FATAL] No valid PDFs processed. Aborting.
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['facebook/bart-large-cnn', 'google/pegasus-arxiv', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 5.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (100.4s) :: Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Recent studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. These studies cross the boundaries of the memory and spatial views and offer new insights into how the hippocampus represents memories....
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (385.4s) :: we argue for the role of memory in cognitive processes. we show that the ability of the memory function to retrieve information about the space of space, as well as its ability to create spatial memory, is a key feature of the cognitive process of learning. in this context , we propose a new way of thinking about learning, based on the notion of a memory map, which we call a cognitive memory map ( cmm ), and we show how it can be used to understand the learning process of a cognitive system....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (191.1s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['…/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[WARN] Missing PDF: …\Daniela Schiller - 2015.pdf
+[FATAL] No valid PDFs processed. Aborting.
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 204.9s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (112.3s) :: In addition to spatial context, the hippocampus encodes a wide variety of information about temporal and situational context, about the systematic organization of events in abstract space, and about routes through maps of cognition and space....
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (81.5s) :: Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Recent studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. These studies cross the boundaries of the memory and spatial views and offer new insights into how the hippocampus represents memories....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (189.7s) :: the hippocampus plays a central role in memory formation, processing, and storage. recent neuroimaging studies in humans and animals have demonstrated that spatial memories are organized within functional hippocampal networks. in this review, we focus on the following topics : ( 1 ) spatial organization of memory in the hippocampus ; ( 2 ) the role of spatial memory in learning and memory ; and ( 3 ) inter - individual differences in spatial memory between humans and other animals....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (107.7s) :: Schiller et al. • Hippocampus as a Multidimensional Cognitive Map...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (75.8s) :: There have been two major views about the role of the hippocampus. One argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain's capacity to calculate routes for traversing physical space....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (289.1s) :: the hippocampus is a brain structure involved in spatial memory. it is also one of the areas of the brain that encodes information for subsequent retrieval. in this review, we focus on the role of the hippocampus in spatial learning, memory, and spatial maps, because the hippocampus has been suggested to be involved in the formation of memories, as well as in the maintenance of spatial memories....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.4s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[ERROR] Daniela Schiller - 2015 × google/flan-t5-large: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[ERROR] Daniela Schiller - 2015 × google/pegasus-pubmed: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.2s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.6s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[ERROR] Daniela Schiller - 2015 × google/flan-t5-large: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[ERROR] Daniela Schiller - 2015 × google/pegasus-pubmed: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[ERROR] Daniela Schiller - 2015 × google/flan-t5-large: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[ERROR] Daniela Schiller - 2015 × google/pegasus-pubmed: UnboundLocalError("cannot access local variable 'section_summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    parts.append(f"### {name.title()}\n{section_summary}")
+                                        ^^^^^^^^^^^^^^^
+UnboundLocalError: cannot access local variable 'section_summary' where it is not associated with a value
+
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.8s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[ERROR] Daniela Schiller - 2015 × google/flan-t5-large: TypeError("expected string or bytes-like object, got 'dict'")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 124, in main
+    secs = split_into_sections(text) or {"full": text}
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\app\sections.py", line 5, in split_into_sections
+    spans = [(m.start(), m.group(1).strip().lower()) for m in pattern.finditer(text)]
+                                                              ~~~~~~~~~~~~~~~~^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[ERROR] Daniela Schiller - 2015 × facebook/bart-large-cnn: TypeError("expected string or bytes-like object, got 'dict'")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 124, in main
+    secs = split_into_sections(text) or {"full": text}
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\app\sections.py", line 5, in split_into_sections
+    spans = [(m.start(), m.group(1).strip().lower()) for m in pattern.finditer(text)]
+                                                              ~~~~~~~~~~~~~~~~^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[ERROR] Daniela Schiller - 2015 × google/pegasus-pubmed: TypeError("expected string or bytes-like object, got 'dict'")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 124, in main
+    secs = split_into_sections(text) or {"full": text}
+           ~~~~~~~~~~~~~~~~~~~^^^^^^
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\app\sections.py", line 5, in split_into_sections
+    spans = [(m.start(), m.group(1).strip().lower()) for m in pattern.finditer(text)]
+                                                              ~~~~~~~~~~~~~~~~^^^^^^
+TypeError: expected string or bytes-like object, got 'dict'
+
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[DEBUG] type(text)=dict, len=1
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (0.0s) :: ...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[DEBUG] type(text)=dict, len=1
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (0.0s) :: ...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[DEBUG] type(text)=dict, len=1
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (0.0s) :: ...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[DEBUG] type(text)=str, len=53231
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (65.4s) :: ### Full Schiller et al. • Hippocampus as a Multidimensional Cognitive Map. Neuron 81:1165–1178. CrossRef Medline Teki S, Kumar S, von Kriegstein K, Stewart L, Lyness CR, Moore BC, Capleton B, Griffiths TD CrossRefMedline O’Keefe J, Dostrovsky J, Teki S. Hippocampal firing sequences that correspond to a previously traversed path can also be replayed during sleep and quiet wakefulness....
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[DEBUG] type(text)=str, len=53231
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (58.3s) :: ### Full The hippocampus maps memories for objects and events in spatial context. Tavares et al. (2015) found that cognitive maps in the human hippocampus extend to social space. The hippocampus is necessary for the ability to link and organize 13906 • J. Neurosci., October 14, 2015 • 35(41):13904–13911. Hippocampal firing sequences that correspond to a previously traversed path can also be ‘replayed’ during sleep and offline rest. In humans, fMRI studies indicate that the hippocampus maximally activated when subjects were planning new routes. These observations suggest that replay events play...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[DEBUG] type(text)=str, len=53231
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (136.0s) :: ### Full hippocampal functions have been shown to be associated with temporal and spatial associations, as well as with spatial memories. in this review, we examine the evidence for the existence of a general role for the hippocampus in spatial memory acquisition and for specific functions in the hippocampus that are related to temporal associations and to social behavior. whereas these neurons become highly activated in association with specific and non - specific associations via common elements. recent evidence indicates that hippocampus represents addition to encoding specific spatial and ...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[DEBUG] type(text)=str, len=53231
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=full :: len=53231 chars
+[ERROR] Daniela Schiller - 2015 × google/flan-t5-large: UnboundLocalError("cannot access local variable 'summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    preview = summary[:600].replace("\n", " ")
+              ^^^^^^^
+UnboundLocalError: cannot access local variable 'summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[DEBUG] type(text)=str, len=53231
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (81.8s) :: [ERROR] UnboundLocalError("cannot access local variable 'summary' where it is not associated with a value")...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[DEBUG] type(text)=str, len=53231
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (207.6s) :: [ERROR] UnboundLocalError("cannot access local variable 'summary' where it is not associated with a value")...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[DEBUG] type(text)=str, len=53231
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=full :: len=53231 chars
+[ERROR] Daniela Schiller - 2015 × google/flan-t5-large: UnboundLocalError("cannot access local variable 'summary' where it is not associated with a value")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 173, in main
+    preview = summary[:600].replace("\n", " ")
+              ^^^^^^^
+UnboundLocalError: cannot access local variable 'summary' where it is not associated with a value
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[DEBUG] type(text)=str, len=53231
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (82.3s) :: [ERROR] UnboundLocalError("cannot access local variable 'summary' where it is not associated with a value")...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[DEBUG] type(text)=str, len=53231
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (227.2s) :: [ERROR] UnboundLocalError("cannot access local variable 'summary' where it is not associated with a value")...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.2s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.6s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[DEBUG] secs keys: ['full']
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (141.9s) :: ### Full Memory and Space: Towards an Understanding of the Cognitive Map Cognitive Maps of Abstract Spaces in the Hippocampus Temporal context The most straightforward example of an abstract “space” supported by the hippocampus that parallels the organization of physical space is the order of events in specific experiences (Eichenbaum, 2014). In particular, recent recording studies in humans using functional neuroimaging(fMRI)haveusedmultivariateanalysis Visually centered space) as well as egocentric space. Recent recording studies in monkeys have revealed the existence of grid cells in the me...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[DEBUG] secs keys: ['full']
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (81.6s) :: ### Full Recent studies have shown that the hippocampus plays a critical role in remembering the order of events in specific experiences. We argue that these studies cross the boundaries of the memory and spatial views and offer new insights into how the hippocampus represents memories. Continued research on mechanisms of Tolman’s cognitive maps across domains of memory is needed to advance our knowledge of the role of the hippocampus in memory, we say. The authors conclude that our understanding of how the hippocampus supports memory and navigation may best be advanced. They conclude that the...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[DEBUG] secs keys: ['full']
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=full :: len=53231 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (201.6s) :: ### Full the hippocampus plays a central role in memory formation, storage, retrieval, and processing. it is also involved in spatial navigation, which is one of the most important aspects of spatial memory. in this article, we argue that spatial memory can be viewed as a kind of spatial map, in which patterns of information are organized in the hippocampal network in order to facilitate navigation. we argue that all of original conceptual maps, as tools for systematically organizing information domains in human life, are useful for revealing more comprehensive understanding of hippocampal fun...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/.../Daniela Schiller - 2015.pdf', '\\']
+[INFO] Models: ['google/pegasus-pubmed', 'google/pegasus-arxiv', 'facebook/bart-large-cnn', 'allenai/led-base-16384']
+[WARN] Missing PDF: C:\...\Daniela Schiller - 2015.pdf
+[INFO] Extracting: \
+[ERROR] Failed to extract \: FileDataError("'\\' is no file")
+Traceback (most recent call last):
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\benchmark.py", line 74, in main
+    pdf_texts[pdf] = process_pdf(pdf)
+                     ~~~~~~~~~~~^^^^^
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\scripts\common.py", line 134, in process_pdf
+    raw = extract_text_by_page(str(pdf_path))
+  File "C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\app\pdf_io.py", line 4, in extract_text_by_page
+    doc = fitz.open(pdf_path)
+  File "C:\Users\jackc\anaconda3\Lib\site-packages\pymupdf\__init__.py", line 2971, in __init__
+    raise FileDataError(f"'{filename}' is no file")
+pymupdf.FileDataError: '\' is no file
+
+[FATAL] No valid PDFs processed. Aborting.
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/.../Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'google/pegasus-arxiv', 'facebook/bart-large-cnn', 'allenai/led-base-16384']
+[WARN] Missing PDF: C:\...\Daniela Schiller - 2015.pdf
+[FATAL] No valid PDFs processed. Aborting.
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'google/pegasus-arxiv', 'facebook/bart-large-cnn', 'allenai/led-base-16384']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[INFO] Loading model: google/pegasus-arxiv
+[OK] Loaded google/pegasus-arxiv in 4.5s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: allenai/led-base-16384
+[OK] Loaded allenai/led-base-16384 in 62.8s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[DEBUG] secs keys: ['abstract', 'introduction', 'methods', 'results', 'discussion']
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (51.1s) :: ### Abstract we report a case of a 63-year - old male who presented with right knee pain and swelling. computed tomography ( ct ) revealed a large mass in the right knee, which was confirmed by magnetic resonance imaging ( mri ). the patient was treated with intra - articular injection of an anti - inflammatory agent ( tnf- ) and recovered uneventfully.  ### Introduction we report a patient with end - stage renal disease ( esrd ) who was found to have a renal cell carcinoma ( rcc ) in the left parietal region of the kidney with metastasis to the left anterior and right superior vena cava ( svc...
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv
+[DEBUG] secs keys: ['abstract', 'introduction', 'methods', 'results', 'discussion']
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-arxiv :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-arxiv (SECTIONED) (94.4s) :: ### Abstract we present a new method for determining the number of atoms in a quantum system. the method is based on the observation that a quantum state can be represented as a superposition of two gaussian states, one of which is a pure quantum state and the other is a mixed quantum state. by comparing the states of the two states , it is possible to determine the total number of particles in the quantum system with high accuracy. using this method, we show that the quantum state of a single atom can be determined with an accuracy of about @xmath0, which is comparable to the precision of ato...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[DEBUG] secs keys: ['abstract', 'introduction', 'methods', 'results', 'discussion']
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (33.7s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus Temporal context The most straightforward summary. Summarize using ONLY facts. Return to Mail Online home. Back to the page you came from. Use the weekly Newsquiz to test your knowledge of stories you saw on CNN.  ### Introduction Summarize the INTRODUCTION as Background and Objectives only. Historically there have been two major views about the role of the U.S. military in the world. The U.N. has played a key role in the development of the modern world.  ### Methods The results also revealed that participants who showed larger ...
+[RUN] Daniela Schiller - 2015 × allenai/led-base-16384
+[DEBUG] secs keys: ['abstract', 'introduction', 'methods', 'results', 'discussion']
+[RUN] Daniela Schiller - 2015 × allenai/led-base-16384 :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × allenai/led-base-16384 :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × allenai/led-base-16384 :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × allenai/led-base-16384 :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × allenai/led-base-16384 :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × allenai/led-base-16384 (SECTIONED) (8.3s) :: ### Abstract Summarize using ONLY facts. Return:FilenameBackground:FilenameMethods:FilenameResults:FilenameConclusions:FilenameTEXT:FilenameCognitive Maps of Abstract Spaces in the Hippocampus Temporal context The most straightforward  ### Introduction Summarize the INTRODUCTION as Background and Objectives only.Background:Background:Objectives:TEXT:Navigation Introduction Historically there have been two major views about the role  ### Methods Summarize METHODS. Return: [+]Participants/Subjects: [+]Design/Paradigm: [+]Measures: [+]Analysis: [+]TEXT: [+]The results also revealed that participa...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.4s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract :: len=94 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract (1.6s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction :: len=83 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction (1.2s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods (2.3s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=results :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=results (1.7s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion (0.7s)
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (10.8s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus.  ### Introduction Hypotheses Hypothesis 1 Hypothesis 2 Hypothesis 3 Hypothesis 4  ### Methods The results showed that participants who showed larger hippocampal sequence were more likely to suffer from Alzheimer's disease.  ### Results These results are consistent with a framework that bridges theories of hippocampal.  ### Discussion Interpretation, stated limitations, implications.  ### Synthesized (Second Pass via facebook/bart-large-cnn) Combine the following section summaries into a single, structured abstract (Background, ...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract (2.6s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction (2.4s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods (2.9s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results (2.9s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion (2.6s)
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (17.5s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus Temporal context is the most straightforward way to sum up the abstract. Summarize the abstract in factual sentences. The most straightforward method is to start with a factual sentence and then move on to the next one.  ### Introduction Summarize the introduction: topic and hypotheses, in plain language. Historically there have been two major views about the role of the internet in the world ofnavigation. In plain language, this article explains how the Internet works and what its role is in the modern world.  ### Methods The r...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract (3.9s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction (3.5s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods (15.6s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results (9.2s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion (3.6s)
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (41.4s) :: ### Abstract we present a narrative review of the most common neuropsychiatric diagnoses in patients with parkinson s disease ( pd ). we focus in particular on the diagnostic and management challenges faced by patients with pd and their families, as well as on the importance of neuropsychological testing in the management of these patients.  ### Introduction there are two major hypotheses about the role of navigation in plain language. the first is that navigation is a dynamic process, and the second is that it is a static process. in this paper , we will introduce the two hypotheses and discu...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.2s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.5s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract :: len=94 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract (1.7s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction :: len=83 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction (0.4s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods (2.3s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=results :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=results (1.8s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion (0.8s)
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (10.2s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus  ### Introduction not reported  ### Methods The results also revealed that participants who showed larger hippocampal sequence.  ### Results These results are consistent with a framework that bridges theories of hippocampal function.  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) Combine the following section summaries into a single, structured abstract. Use only facts present in the summaries. The results are consistent with a framework that bridges theories of hippocampal function and n...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract (2.7s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction (3.2s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods (3.3s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results (3.0s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion (2.8s)
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (18.2s) :: ### Abstract Write a concise, factual summary of the abstract. Use ONLY facts in the text. The most straightforward way to do this is to write the abstract in a single word.  ### Introduction Historically there have been two major views about the role of the internet in the world of medicine.  ### Methods The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer. The results were published in the Journal of Neuroendocrinology and Metabolism.  ### Results These results are consistent with a framework that bridges theories of hippocampal f...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract (3.8s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction (4.9s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods (8.9s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results (25.5s)
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion (4.0s)
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (51.5s) :: ### Abstract not reported  ### Introduction there are two major views about the role of navigation in medical education : the views of the expert and the commoner.  ### Methods not reported  ### Results we report the results of a genome - wide association study ( gwas ) of european - origin hippocampal - derived susceptibility to parkinson's disease ( pd ). we conclude that european - based on our results, asians are likely to be of benefit from the general population in asians.  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) Combine the following sectio...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.4s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.8s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (10.8s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus  ### Introduction not reported  ### Methods The results also revealed that participants who showed larger hippocampal sequence.  ### Results not reported  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) not reported...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (18.4s) :: ### Abstract not reported  ### Introduction Historically there have been two major views about the role of the internet in the world of medicine.  ### Methods The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer.  ### Results not reported  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer....
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (50.6s) :: ### Abstract not reported  ### Introduction there are two major views about the role of navigation in medical education : the views of the expert and the commoner.  ### Methods not reported  ### Results not reported  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) There are two major views about the role of navigation in medical education : the views of the expert and the commoner....
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.4s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (14.2s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus  ### Introduction Not reported  ### Methods The results also revealed that participants who showed larger hippocampal sequence.  ### Results These results are consistent with a framework that bridges theories of hippocampal function.  ### Discussion 'not reported' if absent  ### Synthesized (Second Pass via facebook/bart-large-cnn) If a detail is missing, write 'not reported' Preserve numbers/units/statistics exactly as given. Avoid repetition.Combine the section summaries into a single structured abstract with exactly these hea...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (24.3s) :: ### Abstract Write a concise, factual summary of the abstract. Use ONLY facts in the text. If a detail is missing, write 'not reported' Preserve numbers/units. Avoid repetition. The most straightforward way to do this is to write the abstract in a single word.  ### Introduction Historically there have been two major views about the role of the internet in the world of medicine. This article includes an introduction and hypotheses/objectives.  ### Methods The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer.  ### Results These result...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (65.5s) :: ### Abstract key clinical messagea high index of suspicion is necessary to make an early diagnosis of breast cancer in a woman. although rare, breast cancer should be considered in the differential diagnosis of any woman with a family history of the disease.  ### Introduction there are two major views about the role of navigation in medical education : the views of the expert and the commoner. the expert is the person who has the final say, whereas the commonr has to obey the rules of the game. for the expert , there is a need to understand the facts, as well as to make recommendations.  ### M...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out

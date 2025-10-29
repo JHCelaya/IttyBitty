@@ -1,0 +1,17 @@
+### Abstract
+Cognitive Maps of Abstract Spaces in the Hippocampus
+
+### Introduction
+Not reported
+
+### Methods
+The results also revealed that participants who showed larger hippocampal sequence.
+
+### Results
+These results are consistent with a framework that bridges theories of hippocampal function.
+
+### Discussion
+'not reported' if absent
+
+### Synthesized (Second Pass via facebook/bart-large-cnn)
+If a detail is missing, write 'not reported' Preserve numbers/units/statistics exactly as given. Avoid repetition.Combine the section summaries into a single structured abstract with exactly these headers.

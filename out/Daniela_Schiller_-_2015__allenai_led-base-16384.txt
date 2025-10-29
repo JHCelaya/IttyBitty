@@ -1,0 +1,14 @@
+### Abstract
+Summarize using ONLY facts. Return:FilenameBackground:FilenameMethods:FilenameResults:FilenameConclusions:FilenameTEXT:FilenameCognitive Maps of Abstract Spaces in the Hippocampus Temporal context The most straightforward
+
+### Introduction
+Summarize the INTRODUCTION as Background and Objectives only.Background:Background:Objectives:TEXT:Navigation Introduction Historically there have been two major views about the role
+
+### Methods
+Summarize METHODS. Return: [+]Participants/Subjects: [+]Design/Paradigm: [+]Measures: [+]Analysis: [+]TEXT: [+]The results also revealed that participants who showed larger hippocampal sequence
+
+### Results
+Summarize RESULTS. Return: FALSEKey Findings (with numbers/units): FALSEStatistics (tests, p, CI): FALSETEXT: FALSEThese results are consistent with a framework that bridges theories of hippocampal
+
+### Discussion
+Summarize DISCUSSION. Return: UNCLASSIFIEDInterpretation: UNCLASSIFIEDLimitations (as stated): UNCLASSIFIEDImplications: UNCLASSIFIEDTEXT: UNCLASSIFIEDtheoretical discussions,

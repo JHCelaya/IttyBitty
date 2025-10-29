@@ -1,0 +1,31 @@
+### Abstract
+we present a new method for determining the number of atoms in a quantum system.
+the method is based on the observation that a quantum state can be represented as a superposition of two gaussian states, one of which is a pure quantum state and the other is a mixed quantum state. by comparing the states of the two states
+, it is possible to determine the total number of particles in the quantum system with high accuracy. using this method,
+we show that the quantum state of a single atom can be determined with an accuracy of about @xmath0, which is comparable to the precision of atomic interferometry. in recent years
+there has been a growing interest in quantum information science, due to its potential applications in quantum communication, quantum computation, and quantum computation with entangled states @xcite. among these applications
+are quantum teleportation, entanglement distillation and quantum error correction, to name a few. here, we focus on the application of quantum information theory to the study of quantum systems, in particular, those that are entangled, such as quantum dots, entangled atoms, or quantum dots coupled to each other, as
+
+### Introduction
+we study the dynamics of a two - dimensional ( 2d ) fluid in a harmonic trap.
+we show that the motion of the fluid can be described by a time - dependent gross - pitaevskii equation ( gpe ), which is a generalization of the well - known maxwell - boltzmann equation ( mbe ) to the case of a 2d fluid. in the limit of weak trapping,
+the gpe reduces to the mbe and we obtain a closed system of equations for the time evolution of the density and velocity fields. for strong trapping
+, we find that the system undergoes a phase transition from a 1d to a 3d fluid as the trapping time @xmath0 increases. at the transition point, the density field exhibits a maximum, while the velocity field displays a minimum.
+
+### Methods
+we report on a study of the dynamics of a chain of self - propelling spherical particles.
+the particles are propelled by an external force, such as gravity, and interact with each other. in the absence of gravity
+, the particles form a rigid body, which is supported by an internal force. when the external force is turned off, they move along a trajectory that is determined by the internal force and the particle s trajectory. for small particles,
+this trajectory can be described by a gaussian random walk, while for large particles it has a power - law tail, with exponents that depend on the particle size and the orientation of the trajectory with respect to the axis of rotation of the body. at intermediate particle sizes, we find that the particle trajectories converge to a stationary state, in which the particle velocity is proportional to the degree of internal force acting on it, as predicted by the theory of random walks. since the early days of statistical mechanics, random walks have been used to describe the behavior of a large variety of physical systems, including the motion of stars, planets, asteroids, bacteria, viruses,...
+
+### Results
+we study the dynamics of a charged particle moving in a periodic potential.
+the particle is assumed to be confined to a finite region of space, and its motion is governed by a stochastic differential equation ( sde ). for small amplitude oscillations
+, we find that the particle can move in the direction of the potential, while for large amplitude oscillations the particle moves in the opposite direction. in the latter case,
+we show that the motion of the particle depends on the strength of the stochastic force acting on the particle, as well as on the size of the region in space spanned by the particle and by the length of the period of oscillations. using these results, it is possible to derive an analytical expression for the probability density function ( pdf ) of the total number of particles in the region of interest, which is in good agreement with the monte carlo simulation of the sdss model. since the discovery of the first charged particle in the universe @xcite, there has been a great deal of interest in the properties of this particle. among the most important aspects of this problem is the nature of the confinement mechanism, i.e.,
+
+### Discussion
+we present a new method for the determination of the critical exponents of the dirac equation.
+the method is based on the calculation of the two - point correlation function, which allows us to determine the exponents in a straightforward way. as an application
+, we consider the case of dirac s equation in the presence of an external magnetic field. in this case
+we show that, contrary to what happens in the absence of the field, the exponent @xmath0 is not determined by the field alone, but rather by the coupling between the field and the system s degrees of freedom. we also show that our method can be applied to other dirac equations, in particular to the case when the magnetic field is perpendicular to the plane of interest.

@@ -4,12 +4,10 @@ Shared helpers for IttyBitty scripts:
 - hierarchical summarize
 - PDF processing
 """
-
 from __future__ import annotations
 from pathlib import Path
 from typing import Dict, List
 import re
-
 import torch
 from transformers import AutoTokenizer, AutoModelForSeq2SeqLM
 
@@ -47,49 +45,94 @@ def _chunk_token_ids(ids, max_len: int):
     for i in range(0, len(ids), max_len):
         yield ids[i:i+max_len]
 
-def summarize_text_with(
-    tok,
-    model,
-    text: str,
-    structured: bool = True,
-    max_in_tokens: int = 1024,
-    max_out_tokens: int = 256,
-    num_beams: int = 4,
-) -> str:
-    """Hierarchical summarization if input exceeds max_in_tokens."""
+def summarize_text_with(tok, model, text: str, structured=True,
+                   max_in_tokens=1024, max_out_tokens=256, num_beams=4) -> str:
     if structured:
         text = STRUCTURE_PROMPT + text
-    
-    # Tokenize without truncation to decide chunking
+
+    # Cap by model’s position embedding limit if present (e.g., BART≈1024)
+    safe_max = min(
+        max_in_tokens,
+        getattr(getattr(model, "config", None), "max_position_embeddings", max_in_tokens)
+    )
+    tok.model_max_length = safe_max
+    # Get length WITHOUT truncation so we can decide the path
     ids = tok(text, return_tensors="pt", truncation=False).input_ids[0]
-    if len(ids) <= max_in_tokens:
-        enc = tok(text, return_tensors="pt", truncation=True)
+
+    # --- Short path
+    if len(ids) <= safe_max:
+        enc = tok(text, return_tensors="pt", truncation=True, max_length=safe_max)
+        enc = {k: v.to(next(model.parameters()).device) for k, v in enc.items()}
         with torch.no_grad():
-            out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
-        return tok.decode(out[0], skip_special_tokens=True)
-    
-    
-    # Hierarchical: chunk -> summarize chunks -> summarize the summaries
-    chunk_summaries: List[str] = []
-    for piece in _chunk_token_ids(ids, max_in_tokens):
-        chunk_text = tok.decode(piece, skip_special_tokens=True)
+            out = model.generate(
+                **enc,
+                max_new_tokens=max_out_tokens,
+                num_beams=max(num_beams, 5),
+                do_sample=False,
+                length_penalty=1.1,
+                early_stopping=True,
+                no_repeat_ngram_size=3,
+                repetition_penalty=1.15,
+            )
+        out_text = tok.decode(out[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
+        out_text = out_text.replace(" <n> ", "\n").replace("<n>", "\n")
+        return _dedupe_lines(out_text)
+
+    # --- Hierarchical path
+    parts: List[str] = []
+    for piece in _chunk(ids, safe_max):
+        chunk_text = tok.decode(piece, skip_special_tokens=True)  # no max_length arg here
         if structured:
             chunk_text = STRUCTURE_PROMPT + chunk_text
-        enc = tok(chunk_text, return_tensors="pt", truncation=True)
+        enc = tok(chunk_text, return_tensors="pt", truncation=True, max_length=safe_max)
+        enc = {k: v.to(next(model.parameters()).device) for k, v in enc.items()}
         with torch.no_grad():
-            out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
-        chunk_summaries.append(tok.decode(out[0], skip_special_tokens=True))
+            out = model.generate(
+                **enc,
+                max_new_tokens=max_out_tokens,
+                num_beams=max(num_beams, 5),
+                do_sample=False,
+                length_penalty=1.1,
+                early_stopping=True,
+                no_repeat_ngram_size=3,
+                repetition_penalty=1.15,
+            )
+        parts.append(tok.decode(out[0], skip_special_tokens=True))
 
-    combined = "\n".join(chunk_summaries)
-    enc = tok(combined, return_tensors="pt", truncation=True)
+    combined = "\n".join(parts)
+    enc = tok(combined, return_tensors="pt", truncation=True, max_length=safe_max)
+    enc = {k: v.to(next(model.parameters()).device) for k, v in enc.items()}
     with torch.no_grad():
-        out = model.generate(**enc, max_new_tokens=max_out_tokens, num_beams=num_beams)
-    return tok.decode(out[0], skip_special_tokens=True)
+        out = model.generate(
+            **enc,
+            max_new_tokens=max_out_tokens,
+            min_new_tokens=min(120, max_out_tokens - 16),  # floor for length
+            num_beams=3,                                   # 3 is fine, faster
+            do_sample=False,
+            length_penalty=1.1,
+            early_stopping=True,
+            no_repeat_ngram_size=4,                        # stronger anti-repeat
+            repetition_penalty=1.2,                        # esp. for pegasus
+        )
+    final_text = tok.decode(out[0], skip_special_tokens=True, clean_up_tokenization_spaces=True)
+    final_text = final_text.replace(" <n> ", "\n").replace("<n>", "\n")
+    return _dedupe_lines(final_text)
 
+def _dedupe_lines(s: str) -> str:
+    seen = set(); out = []
+    for line in [x.strip() for x in s.splitlines() if x.strip()]:
+        k = line.lower()
+        if k not in seen:
+            seen.add(k); out.append(line)
+    return "\n".join(out)
+
+def _chunk(ids, max_len: int):
+    for i in range(0, len(ids), max_len):
+        yield ids[i:i+max_len]
 
 def process_pdf(pdf_path: Path, max_sections: int = 5) -> str:
-    """Extract text, split into sections, stitch preferred sections."""
     raw = extract_text_by_page(str(pdf_path))
     sections = split_into_sections(raw)
     stitched = stitch_sections(sections, max_sections=max_sections)
-    return stitched or raw
+    return stitched or raw  # <- string
+
