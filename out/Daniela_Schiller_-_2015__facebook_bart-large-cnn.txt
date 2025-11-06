@@ -1,17 +1,17 @@
 ### Abstract
-Write a concise, factual summary of the abstract. Use ONLY facts in the text. If a detail is missing, write 'not reported' Preserve numbers/units. Avoid repetition. The most straightforward way to do this is to write the abstract in a single word.
+not reported
 
 ### Introduction
-Historically there have been two major views about the role of the internet in the world of medicine. This article includes an introduction and hypotheses/objectives.
+not reported
 
 ### Methods
-The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer.
+The results also revealed that participants who showed larger hippocampal sequence showed a larger hippocampus. The results also showed that participants with larger hippocampus sequences showed better memory function.
 
 ### Results
-These results are consistent with a framework that bridges theories of hippocampal function.
+These results are consistent with a framework that bridges theories of hippocampal neurogenesis.
 
 ### Discussion
-No outside info. Nooretical discussions, no outside information. No discussion of the content of the article. No discussions of the contents of this article.
+not reported
 
 ### Synthesized (Second Pass via facebook/bart-large-cnn)
-Combine the section summaries into a single structured abstract. Use ONLY facts present in the summaries below. If a detail is missing, write 'not reported' Preserve numbers/units. Avoid repetition. Nooretical discussions, no outside information. No discussion of the content of the article.
+not reported

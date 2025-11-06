@@ -60,38 +60,39 @@ def _token_set(s: str) -> set:
 def clean_and_verify(candidate: str,
                      source_text: str,
                      *,
-                     min_overlap: float = 0.18,
-                     require_digit: bool = False,
-                     enforce_overlap: bool = False) -> str:
+                     min_overlap: float = 0.08,
+                     require_digit: bool = False) -> str:
     """
-    - If enforce_overlap=False: only strip obvious junk; keep sentences.
-    - If enforce_overlap=True: require modest token overlap with source (default 0.18).
-    - If require_digit=True: require at least one digit in the sentence.
+    Keep sentences that:
+      - are not obvious junk,
+      - (optionally) contain a digit,
+      - have modest token overlap with the source (Jaccard >= min_overlap).
     """
     if not candidate or not candidate.strip():
         return "not reported"
 
     src_tokens = _token_set(source_text)
+    if not src_tokens:
+        return "not reported"
+
     out = []
     for sent in re.split(r"(?<=[.!?])\s+", candidate.strip()):
         s = sent.strip()
-        if not s:
-            continue
-        if _JUNK_PAT.search(s):
+        if not s or _JUNK_PAT.search(s):
             continue
         if require_digit and not re.search(r"\d", s):
             continue
-        if enforce_overlap:
-            toks = _token_set(s)
-            if not toks:
-                continue
-            inter = len(toks & src_tokens)
-            union = len(toks | src_tokens) or 1
-            if (inter / union) < min_overlap:
-                continue
-        out.append(s)
+
+        toks = _token_set(s)
+        if not toks:
+            continue
+        inter = len(toks & src_tokens)
+        union = len(toks | src_tokens) or 1
+        if (inter / union) >= min_overlap:
+            out.append(s)
 
     return " ".join(out) if out else "not reported"
+
 
 DEVICE = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
@@ -103,37 +104,14 @@ STRUCTURE_PROMPT = (
 
 # Gentle, factual prompts per section
 SECTION_PROMPTS = {
-    "abstract": (
-        "Write a concise, factual summary of the abstract.\n"
-        "Rules: Use ONLY facts in the text. If a detail is missing, write 'not reported'. "
-        "Preserve numbers/units. Avoid repetition.\n\n"
-    ),
-    "introduction": (
-        "Summarize the introduction: topic and hypotheses/objectives.\n"
-        "Rules: facts only; if missing, write 'not reported'.\n\n"
-    ),
-    "methods": (
-        "Summarize the methods: participants/subjects, design, measures, analyses.\n"
-        "Rules: facts only; preserve numbers/units. Use 'not reported' when absent.\n\n"
-    ),
-    "results": (
-        "Summarize the key results.\n"
-        "Rules: include numbers/units/stats if present; otherwise 'not reported'. No speculation.\n\n"
-    ),
-    "discussion": (
-        "Summarize the discussion: interpretation, stated limitations, and implications.\n"
-        "Rules: facts only from the text; 'not reported' if absent. No outside info.\n\n"
-    ),
-    "conclusion": (
-        "Summarize the conclusions in 2–4 factual sentences.\n"
-        "Rules: facts only; 'not reported' if absent.\n\n"
-    ),
-    "full": (
-        "Summarize the paper’s purpose, methods, main results, and key takeaways in factual sentences.\n"
-        "Rules: ONLY facts; preserve numbers/units; use 'not reported' where missing; avoid repetition.\n\n"
-    ),
+    "abstract":      "Write a concise factual summary of the abstract.\n\n",
+    "introduction":  "Summarize the introduction: main topic and objectives/hypotheses.\n\n",
+    "methods":       "Summarize the methods: participants/subjects, design, measures, analyses.\n\n",
+    "results":       "Summarize the key results. Include numbers and statistics if present.\n\n",
+    "discussion":    "Summarize the discussion: interpretation, stated limitations, implications.\n\n",
+    "conclusion":    "Summarize the conclusions in 2–4 factual sentences.\n\n",
+    "full":          "Summarize the paper’s purpose, methods, main results, and key takeaways.\n\n",
 }
-
 
 ORDER = ["abstract","introduction","methods","results","discussion","conclusion","full"]
 
@@ -239,7 +217,7 @@ def main():
                     continue
                 section_text = secs[name]
                 prompt = SECTION_PROMPTS.get(name, SECTION_PROMPTS["full"])
-                run_text = prompt + section_text
+                run_text = f"{prompt}==== TEXT START ====\n{section_text}\n==== TEXT END ===="
 
                 log(f"[RUN] {pdf_base} × {mid} :: section={name} :: len={len(section_text)} chars")
                 try:
@@ -260,23 +238,20 @@ def main():
                     if name == "results":
                         section_summary = clean_and_verify(
                             section_summary, section_text,
-                            min_overlap=0.15,
+                            min_overlap=0.10,
                             require_digit=has_numbers_in_source,   # only if the source actually has numbers
-                            enforce_overlap=True
                         )
                     elif name == "methods":
                         section_summary = clean_and_verify(
                             section_summary, section_text,
-                            min_overlap=0.15,
+                            min_overlap=0.10,
                             require_digit=False,
-                            enforce_overlap=True
                         )
                     else:
                         section_summary = clean_and_verify(
                             section_summary, section_text,
-                            min_overlap=0.0,
+                            min_overlap=0.8,
                             require_digit=False,
-                            enforce_overlap=False
                         )
 
                 except Exception as e:
@@ -313,6 +288,33 @@ def main():
                     synthesized = f"[ERROR] {e!r}"
 
                 parts.append(f"### Synthesized (Second Pass via {synth_id})\n{synthesized}")
+            # If every section is "not reported" or errors, do a single-pass full-text summary as fallback
+            all_empty = True
+            for p in parts:
+                # crude check: something other than headers and "not reported"
+                if "not reported" not in p and "[ERROR]" not in p:
+                    all_empty = False
+                    break
+
+            if all_empty:
+                fallback_text = secs.get("full", full_text)
+                try:
+                    fallback_summary = summarize_text_with(
+                        tok, model,
+                        (STRUCTURE_PROMPT if args.structured else "") + fallback_text,
+                        structured=False,
+                        max_in_tokens=args.max_in_tokens,
+                        max_out_tokens=max(args.max_out_tokens, 512),
+                        num_beams=max(args.num_beams, 4),
+                    )
+                    fallback_summary = clean_and_verify(
+                        fallback_summary, fallback_text,
+                        min_overlap=0.0, require_digit=False, enforce_overlap=False
+                    )
+                except Exception as e:
+                    fallback_summary = f"[ERROR] {e!r}"
+
+                parts.append(f"### Full (Fallback)\n{fallback_summary}")
 
             # 4) Finalize per-model summary
             summary = "\n\n".join(parts)
