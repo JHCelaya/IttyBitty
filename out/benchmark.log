@@ -968,3 +968,116 @@ pymupdf.FileDataError: '\' is no file
 [OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (58.8s) :: ### Abstract not reported  ### Introduction not reported  ### Methods the or for african american asd patients was also significantly higher than for european american and asd control subjects, suggesting that asd is a multifactorial disease.  ### Results abstractthe aim of this study was to determine if there is a relationship between the number of hippocampal lesions and the age of the patient. in the retrospective analysis , it was found that there was a statistically significant difference between the age groups, with the mean age of patients being significantly younger than that of the co...
 [OK] Wrote report: out\benchmark_report.md
 [OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'facebook/bart-large-cnn']
+[INFO] Extracting: Daniela Schiller - 2015.pdf
+[OK] Extracted sections: ['full']
+[INFO] Loading google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 5.4s
+[INFO] Loading facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.4s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (7.6s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (6.2s)
+[OK] Report: out\benchmark_report.md
+[INFO] Starting benchmark
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'facebook/bart-large-cnn', 'google/flan-t5-large']
+[INFO] Extracting: Daniela Schiller - 2015.pdf
+[OK] Extracted sections: ['full']
+[INFO] Loading google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[INFO] Loading facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (7.4s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (5.1s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (6.2s)
+[OK] Report: out\benchmark_report.md
+
+============================================================
+[INFO] Starting benchmark
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'facebook/bart-large-cnn', 'google/flan-t5-large']
+============================================================
+
+[INFO] Extracting: Daniela Schiller - 2015.pdf
+[INFO] Total text length: 53231 characters
+[INFO] Sections detected: ['introduction', 'abstract', 'results', 'discussion', 'conclusion']
+  - introduction: 4844 chars
+  - abstract: 2537 chars
+  - results: 3735 chars
+  - discussion: 326 chars
+  - conclusion: 18106 chars
+[OK] Using 5 sections: ['introduction', 'abstract', 'results', 'discussion', 'conclusion']
+
+[INFO] Loading google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.6s
+
+[INFO] Loading facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+
+[INFO] Loading google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 0.9s
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+========================================
+  [abstract] Processing 2537 chars...
+  [abstract] ✓ Generated 350 chars
+  [introduction] Processing 4844 chars...
+  [introduction] ✓ Generated 374 chars
+  [results] Processing 3735 chars...
+  [results] ✓ Generated 698 chars
+  [discussion] Processing 326 chars...
+  [discussion] ✓ Generated 336 chars
+  [conclusion] Processing 18106 chars...
+  [conclusion] ✓ Generated 341 chars
+[OK] Completed in 48.5s
+========================================
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+========================================
+  [abstract] Processing 2537 chars...
+  [abstract] ✓ Generated 387 chars
+  [introduction] Processing 4844 chars...
+  [introduction] ✓ Generated 424 chars
+  [results] Processing 3735 chars...
+  [results] ✓ Generated 518 chars
+  [discussion] Processing 326 chars...
+  [discussion] ✓ Generated 285 chars
+  [conclusion] Processing 18106 chars...
+  [conclusion] ✓ Generated 427 chars
+[OK] Completed in 30.5s
+========================================
+
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+========================================
+  [abstract] Processing 2537 chars...
+  [abstract] ✓ Generated 183 chars
+  [introduction] Processing 4844 chars...
+  [introduction] ⚠ Summary too short or invalid
+  [results] Processing 3735 chars...
+  [results] ✓ Generated 130 chars
+  [discussion] Processing 326 chars...
+  [discussion] ✓ Generated 154 chars
+  [conclusion] Processing 18106 chars...
+  [conclusion] ✓ Generated 220 chars
+[OK] Completed in 27.9s
+========================================
+
+
+============================================================
+[SUCCESS] Report saved: out\benchmark_report.md
+[SUCCESS] Individual files in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+============================================================

@@ -1,17 +1,9 @@
-### Abstract
-not reported
+**Abstract**: Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract “space” supported by the hippocampus is the organization of memories in time.
 
-### Introduction
-not reported
+**Introduction**: One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain’s capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.
 
-### Methods
-The results also revealed that participants who showed larger hippocampal sequence showed a larger hippocampus. The results also showed that participants with larger hippocampus sequences showed better memory function.
+**Results**: In studies on animals, the robust observation of hippocampal place cells has long been used to advance the idea that the neuronal networks in the hippocampus parse spatial context into representations of locations in space. However, recent studies have shown that, consistent with its key role in temporally organized memory, the hippocampus also parses temporally structured experiences. The properties of these “time cells” parallel those of place cells, but in the temporal dimension rather than spatial dimensions.
 
-### Results
-These results are consistent with a framework that bridges theories of hippocampal neurogenesis.
+**Discussion**: Fanselow and Dong, 2010; Ranganath and Ritchey, 2012; Milivojevic and Doeller, 2013; Poppenk et al., 2013). Consistent with these ideas, a recent study revealed representations of the spatial and temporal dimensions of real-life remembered experiences in the left anterior hippocampus.
 
-### Discussion
-not reported
-
-### Synthesized (Second Pass via facebook/bart-large-cnn)
-not reported
+**Conclusion**: A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights considerable evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) The experiments discussed here support the idea that the hippocampus embodies each of these properties.

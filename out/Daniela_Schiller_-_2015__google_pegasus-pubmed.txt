@@ -1,18 +1,9 @@
-### Abstract
-not reported
+**Abstract**: abstractthe hippocampus plays a critical role in the order of memory retrieval. recent studies have revealed that hippocampal activity patterns during learning are related to successful retrievals of temporal information in different contexts, suggesting that they might be separable additional representations of spatial information during learning.
 
-### Introduction
-not reported
+**Introduction**: the hippocampus has been identified as a critical memory region in humans. this paper proposes that the hippocampus should be considered as a hub for navigation and memory, and that it is important for the hippocampus to be integrated with other areas of the brain, as well as with the rest of the hippocampus, in order to create a comprehensive map of hippocampal function.
 
-### Methods
-the or for african american asd patients was also significantly higher than for european american and asd control subjects, suggesting that asd is a multifactorial disease.
+**Results**: the entorhinal cortex ( ec ) has long been considered to be involved in spatial memory. recent studies show that ec neurons are activated in hippocampal cortex during periods of episodic memory ( e.g., running on a treadmill ). in addition, ec cells are represented in space and time as representations of their medial location, for example, in the medial cortex of the eye, or in the hippocampus of the brain. however, it is not yet clear whether these temporal representations of the ec are also consistent with those of the hippocampus. here , i will review the evidence that supports the idea that the hippocampus plays a role in episodic memory, and discuss the implications of these findings.
 
-### Results
-abstractthe aim of this study was to determine if there is a relationship between the number of hippocampal lesions and the age of the patient. in the retrospective analysis
-, it was found that there was a statistically significant difference between the age groups, with the mean age of patients being significantly younger than that of the control group ( p  0.001 ).
+**Discussion**: the hippocampus is a key structure in spatial memory. we have recently shown that the spatial memory of young children with autism spectrum disorders ( asd ) is impaired when they are placed in the left temporal lobe of the brain, compared to their peers in the right temporal lobe. here , we discuss the implications of these findings.
 
-### Discussion
-not reported
-
-### Synthesized (Second Pass via facebook/bart-large-cnn)
-The aim of this study was to determine if there is a relationship between the number of hippocampal lesions and the age of the patient. In the retrospective analysis, it was found that there was a statistically significant difference between the age groups. The mean age of patients was significantly younger than that of the control group ( p  0.001 ).
+**Conclusion**: this paper supports the idea that spatial memory can be viewed as a form of spatial network activity. this network is organized within the hippocampus, a region of the brain involved in memory formation and storage. in this paper , we suggest that hippocampal network activity contributes to spatial memory formation, storage, and retrieval.

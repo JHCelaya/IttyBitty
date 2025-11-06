@@ -1,17 +1,7 @@
-### Abstract
-Cognitive Maps of Abstract Spaces in the Hippocampus The most straightforward
+**Abstract**: Hippocampus Temporal context The most straightforward example of an abstract “space” supported by the hippocampus that parallels the organization of physical space is the organization
 
-### Introduction
-not reported
+**Results**: Recent evidence has also distinguished specific aspects of neuronal coding for temporal and spatial context within the hippocampus
 
-### Methods
-The results also revealed that participants who showed larger hippocampal sequence
+**Discussion**: spatial representations of real-life remembered experiences in the left anterior hippocampus are consistent with those of previous studies (Poppenk et al.
 
-### Results
-These results are consistent with a framework that bridges theories of hippocampal
-
-### Discussion
-not reported
-
-### Synthesized (Second Pass via facebook/bart-large-cnn)
-not reported
+**Conclusion**: A brief review highlights considerable evidence that supports reconciliation of the memory and spatial views of hippocampal function by adopting the perspective of cognitive maps as originally conceived by Tolman (1948).
