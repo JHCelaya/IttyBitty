@@ -900,3 +900,184 @@ pymupdf.FileDataError: '\' is no file
 [OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (65.5s) :: ### Abstract key clinical messagea high index of suspicion is necessary to make an early diagnosis of breast cancer in a woman. although rare, breast cancer should be considered in the differential diagnosis of any woman with a family history of the disease.  ### Introduction there are two major views about the role of navigation in medical education : the views of the expert and the commoner. the expert is the person who has the final say, whereas the commonr has to obey the rules of the game. for the expert , there is a need to understand the facts, as well as to make recommendations.  ### M...
 [OK] Wrote report: out\benchmark_report.md
 [OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.4s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 5.1s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (13.3s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus  ### Introduction Not reported  ### Methods The results also revealed that participants who showed larger hippocampal sequence.  ### Results These results are consistent with a framework that bridges theories of hippocampal function.  ### Discussion 'not reported' if absent  ### Synthesized (Second Pass via facebook/bart-large-cnn) If a detail is missing, write 'not reported' Preserve numbers/units/statistics exactly as given. Avoid repetition.Combine the section summaries into a single structured abstract with exactly these hea...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (19.1s) :: ### Abstract Write a concise, factual summary of the abstract. Use ONLY facts in the text. If a detail is missing, write 'not reported' Preserve numbers/units. Avoid repetition. The most straightforward way to do this is to write the abstract in a single word.  ### Introduction Historically there have been two major views about the role of the internet in the world of medicine. This article includes an introduction and hypotheses/objectives.  ### Methods The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer.  ### Results These result...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (53.1s) :: ### Abstract key clinical messagea high index of suspicion is necessary to make an early diagnosis of breast cancer in a woman. although rare, breast cancer should be considered in the differential diagnosis of any woman with a family history of the disease.  ### Introduction there are two major views about the role of navigation in medical education : the views of the expert and the commoner. the expert is the person who has the final say, whereas the commonr has to obey the rules of the game. for the expert , there is a need to understand the facts, as well as to make recommendations.  ### M...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark; outputs -> C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] PDFs: ['C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/flan-t5-large', 'facebook/bart-large-cnn', 'google/pegasus-pubmed']
+[INFO] Extracting: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[OK] Extracted: C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf
+[INFO] Loading model: google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[INFO] Loading model: facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.3s
+[INFO] Loading model: google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (SECTIONED) (18.6s) :: ### Abstract Cognitive Maps of Abstract Spaces in the Hippocampus The most straightforward  ### Introduction not reported  ### Methods The results also revealed that participants who showed larger hippocampal sequence  ### Results These results are consistent with a framework that bridges theories of hippocampal  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) not reported...
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (SECTIONED) (27.3s) :: ### Abstract not reported  ### Introduction not reported  ### Methods The results also revealed that participants who showed larger hippocampal sequence showed a larger hippocampus. The results also showed that participants with larger hippocampus sequences showed better memory function.  ### Results These results are consistent with a framework that bridges theories of hippocampal neurogenesis.  ### Discussion not reported  ### Synthesized (Second Pass via facebook/bart-large-cnn) not reported...
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=abstract :: len=94 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=introduction :: len=83 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=methods :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=results :: len=82 chars
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed :: section=discussion :: len=24 chars
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (SECTIONED) (58.8s) :: ### Abstract not reported  ### Introduction not reported  ### Methods the or for african american asd patients was also significantly higher than for european american and asd control subjects, suggesting that asd is a multifactorial disease.  ### Results abstractthe aim of this study was to determine if there is a relationship between the number of hippocampal lesions and the age of the patient. in the retrospective analysis , it was found that there was a statistically significant difference between the age groups, with the mean age of patients being significantly younger than that of the co...
+[OK] Wrote report: out\benchmark_report.md
+[OK] Individual outputs in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+[INFO] Starting benchmark
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'facebook/bart-large-cnn']
+[INFO] Extracting: Daniela Schiller - 2015.pdf
+[OK] Extracted sections: ['full']
+[INFO] Loading google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 5.4s
+[INFO] Loading facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.4s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (7.6s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (6.2s)
+[OK] Report: out\benchmark_report.md
+[INFO] Starting benchmark
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'facebook/bart-large-cnn', 'google/flan-t5-large']
+[INFO] Extracting: Daniela Schiller - 2015.pdf
+[OK] Extracted sections: ['full']
+[INFO] Loading google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.7s
+[INFO] Loading facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+[INFO] Loading google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 1.1s
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × google/pegasus-pubmed (7.4s)
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × facebook/bart-large-cnn (5.1s)
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+  - Summarizing full (52337 chars)
+[OK] Daniela Schiller - 2015 × google/flan-t5-large (6.2s)
+[OK] Report: out\benchmark_report.md
+
+============================================================
+[INFO] Starting benchmark
+[INFO] PDFs: ['C:\\Users\\jackc\\OneDrive\\Desktop\\Notes\\1 - Source Material\\Daniela Schiller - 2015.pdf']
+[INFO] Models: ['google/pegasus-pubmed', 'facebook/bart-large-cnn', 'google/flan-t5-large']
+============================================================
+
+[INFO] Extracting: Daniela Schiller - 2015.pdf
+[INFO] Total text length: 53231 characters
+[INFO] Sections detected: ['introduction', 'abstract', 'results', 'discussion', 'conclusion']
+  - introduction: 4844 chars
+  - abstract: 2537 chars
+  - results: 3735 chars
+  - discussion: 326 chars
+  - conclusion: 18106 chars
+[OK] Using 5 sections: ['introduction', 'abstract', 'results', 'discussion', 'conclusion']
+
+[INFO] Loading google/pegasus-pubmed
+[OK] Loaded google/pegasus-pubmed in 4.6s
+
+[INFO] Loading facebook/bart-large-cnn
+[OK] Loaded facebook/bart-large-cnn in 1.2s
+
+[INFO] Loading google/flan-t5-large
+[OK] Loaded google/flan-t5-large in 0.9s
+
+[RUN] Daniela Schiller - 2015 × google/pegasus-pubmed
+========================================
+  [abstract] Processing 2537 chars...
+  [abstract] ✓ Generated 350 chars
+  [introduction] Processing 4844 chars...
+  [introduction] ✓ Generated 374 chars
+  [results] Processing 3735 chars...
+  [results] ✓ Generated 698 chars
+  [discussion] Processing 326 chars...
+  [discussion] ✓ Generated 336 chars
+  [conclusion] Processing 18106 chars...
+  [conclusion] ✓ Generated 341 chars
+[OK] Completed in 48.5s
+========================================
+
+[RUN] Daniela Schiller - 2015 × facebook/bart-large-cnn
+========================================
+  [abstract] Processing 2537 chars...
+  [abstract] ✓ Generated 387 chars
+  [introduction] Processing 4844 chars...
+  [introduction] ✓ Generated 424 chars
+  [results] Processing 3735 chars...
+  [results] ✓ Generated 518 chars
+  [discussion] Processing 326 chars...
+  [discussion] ✓ Generated 285 chars
+  [conclusion] Processing 18106 chars...
+  [conclusion] ✓ Generated 427 chars
+[OK] Completed in 30.5s
+========================================
+
+[RUN] Daniela Schiller - 2015 × google/flan-t5-large
+========================================
+  [abstract] Processing 2537 chars...
+  [abstract] ✓ Generated 183 chars
+  [introduction] Processing 4844 chars...
+  [introduction] ⚠ Summary too short or invalid
+  [results] Processing 3735 chars...
+  [results] ✓ Generated 130 chars
+  [discussion] Processing 326 chars...
+  [discussion] ✓ Generated 154 chars
+  [conclusion] Processing 18106 chars...
+  [conclusion] ✓ Generated 220 chars
+[OK] Completed in 27.9s
+========================================
+
+
+============================================================
+[SUCCESS] Report saved: out\benchmark_report.md
+[SUCCESS] Individual files in: C:\Users\jackc\OneDrive\Documents\GitHub\IttyBitty\out
+============================================================

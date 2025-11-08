@@ -1,71 +1,44 @@
-# IttyBitty Benchmark Report
-- Structured: `True`
-- max_in_tokens: `1024`, max_out_tokens: `512`, num_beams: `4`
-- Models: google/flan-t5-large, facebook/bart-large-cnn, google/pegasus-pubmed
+# Scientific Paper Summarization Benchmark
+- Models: google/pegasus-pubmed, facebook/bart-large-cnn, google/flan-t5-large
+- Settings: max_in=1024, max_out=512, beams=4
 
 ## Daniela Schiller - 2015
-_File_: `C:\Users\jackc\OneDrive\Desktop\Notes\1 - Source Material\Daniela Schiller - 2015.pdf`
+_Source_: `Daniela Schiller - 2015.pdf`
+_Sections found_: introduction, abstract, results, discussion, conclusion
 
-### Model: `google/flan-t5-large`
-```text
-### Abstract
-Cognitive Maps of Abstract Spaces in the Hippocampus
+### google/pegasus-pubmed
+```
+**Abstract**: abstractthe hippocampus plays a critical role in the order of memory retrieval. recent studies have revealed that hippocampal activity patterns during learning are related to successful retrievals of temporal information in different contexts, suggesting that they might be separable additional representations of spatial information during learning.
 
-### Introduction
-Not reported
+**Introduction**: the hippocampus has been identified as a critical memory region in humans. this paper proposes that the hippocampus should be considered as a hub for navigation and memory, and that it is important for the hippocampus to be integrated with other areas of the brain, as well as with the rest of the hippocampus, in order to create a comprehensive map of hippocampal function.
 
-### Methods
-The results also revealed that participants who showed larger hippocampal sequence.
+**Results**: the entorhinal cortex ( ec ) has long been considered to be involved in spatial memory. recent studies show that ec neurons are activated in hippocampal cortex during periods of episodic memory ( e.g., running on a treadmill ). in addition, ec cells are represented in space and time as representations of their medial location, for example, in the medial cortex of the eye, or in the hippocampus of the brain. however, it is not yet clear whether these temporal representations of the ec are also consistent with those of the hippocampus. here , i will review the evidence that supports the idea that the hippocampus plays a role in episodic memory, and discuss the implications of these findings.
 
-### Results
-These results are consistent with a framework that bridges theories of hippocampal function.
+**Discussion**: the hippocampus is a key structure in spatial memory. we have recently shown that the spatial memory of young children with autism spectrum disorders ( asd ) is impaired when they are placed in the left temporal lobe of the brain, compared to their peers in the right temporal lobe. here , we discuss the implications of these findings.
 
-### Discussion
-'not reported' if absent
-
-### Synthesized (Second Pass via facebook/bart-large-cnn)
-If a detail is missing, write 'not reported' Preserve numbers/units/statistics exactly as given. Avoid repetition.Combine the section summaries into a single structured abstract with exactly these headers.
+**Conclusion**: this paper supports the idea that spatial memory can be viewed as a form of spatial network activity. this network is organized within the hippocampus, a region of the brain involved in memory formation and storage. in this paper , we suggest that hippocampal network activity contributes to spatial memory formation, storage, and retrieval.
 ```
 
-### Model: `facebook/bart-large-cnn`
-```text
-### Abstract
-Write a concise, factual summary of the abstract. Use ONLY facts in the text. If a detail is missing, write 'not reported' Preserve numbers/units. Avoid repetition. The most straightforward way to do this is to write the abstract in a single word.
+### facebook/bart-large-cnn
+```
+**Abstract**: Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract “space” supported by the hippocampus is the organization of memories in time.
 
-### Introduction
-Historically there have been two major views about the role of the internet in the world of medicine. This article includes an introduction and hypotheses/objectives.
+**Introduction**: One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain’s capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.
 
-### Methods
-The results also revealed that participants who showed larger hippocampal sequence were more likely to live longer.
+**Results**: In studies on animals, the robust observation of hippocampal place cells has long been used to advance the idea that the neuronal networks in the hippocampus parse spatial context into representations of locations in space. However, recent studies have shown that, consistent with its key role in temporally organized memory, the hippocampus also parses temporally structured experiences. The properties of these “time cells” parallel those of place cells, but in the temporal dimension rather than spatial dimensions.
 
-### Results
-These results are consistent with a framework that bridges theories of hippocampal function.
+**Discussion**: Fanselow and Dong, 2010; Ranganath and Ritchey, 2012; Milivojevic and Doeller, 2013; Poppenk et al., 2013). Consistent with these ideas, a recent study revealed representations of the spatial and temporal dimensions of real-life remembered experiences in the left anterior hippocampus.
 
-### Discussion
-No outside info. Nooretical discussions, no outside information. No discussion of the content of the article. No discussions of the contents of this article.
-
-### Synthesized (Second Pass via facebook/bart-large-cnn)
-Combine the section summaries into a single structured abstract. Use ONLY facts present in the summaries below. If a detail is missing, write 'not reported' Preserve numbers/units. Avoid repetition. Nooretical discussions, no outside information. No discussion of the content of the article.
+**Conclusion**: A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights considerable evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) The experiments discussed here support the idea that the hippocampus embodies each of these properties.
 ```
 
-### Model: `google/pegasus-pubmed`
-```text
-### Abstract
-key clinical messagea high index of suspicion is necessary to make an early diagnosis of breast cancer in a woman. although rare, breast cancer should be considered in the differential diagnosis of any woman with a family history of the disease.
+### google/flan-t5-large
+```
+**Abstract**: Hippocampus Temporal context The most straightforward example of an abstract “space” supported by the hippocampus that parallels the organization of physical space is the organization
 
-### Introduction
-there are two major views about the role of navigation in medical education : the views of the expert and the commoner. the expert is the person who has the final say, whereas the commonr has to obey the rules of the game. for the expert
-, there is a need to understand the facts, as well as to make recommendations.
+**Results**: Recent evidence has also distinguished specific aspects of neuronal coding for temporal and spatial context within the hippocampus
 
-### Methods
-not reported
+**Discussion**: spatial representations of real-life remembered experiences in the left anterior hippocampus are consistent with those of previous studies (Poppenk et al.
 
-### Results
-not reported
-
-### Discussion
-key clinical messagethis case highlights the need for a multidisciplinary approach to the treatment of chronic obstructive pulmonary disease ( copd ). we must consider not only the patient's history, but also the history of the health care provider, in order to provide the best possible care for the patient.
-
-### Synthesized (Second Pass via facebook/bart-large-cnn)
-If a detail is missing, write 'not reported' Preserve numbers/units/statistics exactly as given. Avoid repetition.Combine the section summaries into a single structured abstract with exactly these headers.
+**Conclusion**: A brief review highlights considerable evidence that supports reconciliation of the memory and spatial views of hippocampal function by adopting the perspective of cognitive maps as originally conceived by Tolman (1948).
 ```
