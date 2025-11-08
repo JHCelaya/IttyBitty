@@ -18,3 +18,5 @@ Features
 python -m scripts.benchmark --pdf "C:/Users/jackc/OneDrive/Desktop/Notes/1 - Source Material/Daniela Schiller - 2015.pdf" `
   --models google/flan-t5-large facebook/bart-large-cnn google/pegasus-pubmed `
   --structured --max_out_tokens 512 --num_beams 4
+
+python -m uvicorn app.main_v2:app --reload #run the app. Click the front end in the file.
