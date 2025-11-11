@@ -253,28 +253,32 @@
                 showError('Please upload a PDF file');
                 return;
             }
-            
-            // Hide previous results
+
+            // Reset UI
             error.style.display = 'none';
             summary.style.display = 'none';
             loading.style.display = 'block';
-            
+
             const formData = new FormData();
             formData.append('file', file);
-            
+
             try {
                 const response = await fetch(`${API_URL}/upload`, {
                     method: 'POST',
-                    body: formData
+                    body: formData,
+                    // bust caches on some setups
+                    headers: { 'X-Requested-With': 'fetch' }
                 });
-                
-                if (!response.ok) {
-                    throw new Error('Upload failed');
-                }
-                
-                const data = await response.json();
-                displaySummary(data);
-                loadPapers(); // Refresh papers list
+
+                if (!response.ok) throw new Error('Upload failed');
+
+                const { paper_id } = await response.json();
+
+                // Start polling that paper until it's ready
+                await pollPaper(paper_id);
+
+                // Refresh “Previous Papers”
+                loadPapers();
             } catch (err) {
                 showError('Error processing PDF. Please try again.');
                 console.error(err);
@@ -282,32 +286,65 @@
                 loading.style.display = 'none';
             }
         }
-        
-        function displaySummary(data) {
-            paperTitle.textContent = data.title;
+
+        async function pollPaper(id, { intervalMs = 2000, maxTries = 60 } = {}) {
+            for (let i = 0; i < maxTries; i++) {
+                // add a cache buster to avoid stale GETs
+                const response = await fetch(`${API_URL}/papers/${id}?t=${Date.now()}`, {
+                    headers: { 'X-Requested-With': 'fetch' },
+                    cache: 'no-store',
+                });
+
+                if (!response.ok) throw new Error('Failed to fetch paper status');
+
+                const paper = await response.json();
+
+                if (paper.status === 'complete') {
+                    displaySummary(paper);
+                    return;
+                }
+                if (paper.status === 'failed') {
+                    showError(paper.error || 'Processing failed. Please try again.');
+                    return;
+                }
+
+                // still processing
+                await new Promise(r => setTimeout(r, intervalMs));
+            }
+
+            showError('Timed out waiting for processing. Please try again.');
+        }
+
+        function displaySummary(paper) {
+        // paper is the full object from GET /api/papers/{id}
+            paperTitle.textContent = paper.title || '(Untitled Paper)';
             sections.innerHTML = '';
-            
+
             const order = ['abstract', 'introduction', 'methods', 'results', 'discussion', 'conclusion'];
-            
+            const available = (paper.sections && typeof paper.sections === 'object') ? paper.sections : {};
+
+            let renderedAny = false;
             for (const name of order) {
-                if (data.sections[name]) {
+                const content = available[name];
+                if (content && content.trim()) {
                     const div = document.createElement('div');
                     div.className = 'section';
                     div.innerHTML = `
                         <div class="section-title">${name}</div>
-                        <div class="section-content">${data.sections[name]}</div>
+                        <div class="section-content">${content}</div>
                     `;
                     sections.appendChild(div);
+                    renderedAny = true;
                 }
             }
-            
+
+            if (!renderedAny) {
+                sections.innerHTML = `<p style="color:#666;">No sections available yet.</p>`;
+            }
+
             summary.style.display = 'block';
         }
-        
-        function showError(message) {
-            error.textContent = message;
-            error.style.display = 'block';
-        }
+
         
         async function loadPapers() {
             try {
@@ -332,12 +369,27 @@
         
         async function loadPaper(id) {
             try {
-                const response = await fetch(`${API_URL}/papers/${id}`);
+                const response = await fetch(`${API_URL}/papers/${id}?t=${Date.now()}`, {
+                    headers: { 'X-Requested-With': 'fetch' },
+                    cache: 'no-store',
+                });
                 const paper = await response.json();
-                displaySummary(paper);
+
+                if (paper.status === 'processing') {
+                    loading.style.display = 'block';
+                    await pollPaper(id);
+                } else if (paper.status === 'complete') {
+                    displaySummary(paper);
+                } else if (paper.status === 'failed') {
+                    showError(paper.error || 'Processing failed. Please try again.');
+                }
+
                 window.scrollTo({ top: 0, behavior: 'smooth' });
             } catch (err) {
                 showError('Error loading paper');
+                console.error(err);
+            } finally {
+                loading.style.display = 'none';
             }
         }
         
