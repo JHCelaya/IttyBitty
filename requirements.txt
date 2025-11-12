@@ -1,7 +1,17 @@
-fastapi
-uvicorn[standard]
-transformers
-torch
-sentencepiece
-pymupdf
-nltk
+# Core API framework
+fastapi==0.104.1
+uvicorn[standard]==0.24.0
+
+# HTTP client for API calls
+httpx==0.25.0
+
+# File handling
+python-multipart==0.0.6
+
+# PDF processing
+pymupdf==1.23.7
+
+# Optional: Keep these ONLY if you want to run benchmarks locally
+transformers==4.35.0
+torch==2.1.0
+sentencepiece==0.1.99
