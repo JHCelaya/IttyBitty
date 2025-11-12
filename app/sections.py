@@ -52,90 +52,61 @@ def _preclean(text: str) -> str:
     return text
 
 def split_into_sections(text: str) -> dict:
-    """
-    Split paper text into sections based on headers.
-    Returns dict mapping canonical section names to their text content.
-    """
+    """Improved section detection for academic papers."""
     text = _preclean(text)
     
-    # First, remove references section and everything after
-    refs_match = re.search(r'\n\s*References\s*\n', text, re.IGNORECASE)
-    if refs_match:
-        text = text[:refs_match.start()]
+    # More comprehensive section patterns
+    section_patterns = [
+        # Numbered sections: "1. Introduction", "2.1 Methods"
+        r'^\s*\d+(?:\.\d+)*\.?\s+(Introduction|Methods?|Results?|Discussion|Conclusion)',
+        # Standalone headers
+        r'^\s*(ABSTRACT|INTRODUCTION|METHODS?|RESULTS?|DISCUSSION|CONCLUSIONS?)\s*$',
+        # With colons
+        r'^\s*(Abstract|Introduction|Methods?|Results?|Discussion|Conclusions?):\s*$',
+    ]
     
-    # Build pattern that finds section headers even when embedded in text
-    all_section_words = []
-    for aliases in SECTION_ALIASES.values():
-        all_section_words.extend(aliases)
+    combined_pattern = '|'.join(f'({p})' for p in section_patterns)
+    pattern = re.compile(combined_pattern, re.IGNORECASE | re.MULTILINE)
     
-    # Create patterns for each section type
-    patterns = []
-    
-    # Pattern 1: Section name at start of line (traditional)
-    patterns.append(
-        re.compile(
-            r'^(?:\d+\.?\s*)?(' + '|'.join(re.escape(w) for w in all_section_words) + r')(?:\s|\.|\:|$)',
-            re.IGNORECASE | re.MULTILINE
-        )
-    )
-    
-    # Pattern 2: Section name embedded in text
-    patterns.append(
-        re.compile(
-            r'\b(' + '|'.join(re.escape(w) for w in all_section_words) + r')(?:\.|:)?\s+[A-Z]',
-            re.IGNORECASE
-        )
-    )
-    
-    all_matches = []
-    for pattern in patterns:
-        for m in pattern.finditer(text):
-            header_text = m.group(1).strip()
-            canonical = _canon(header_text)
-            
-            # Skip excluded sections and unrecognized headers
-            if canonical == "__exclude__" or canonical not in SECTION_ALIASES:
-                continue
-            
-            # Store: (position, canonical_name, end_of_match)
-            all_matches.append((m.start(), canonical, m.end()))
-    
-    # Remove duplicates and sort by position
-    all_matches = sorted(set(all_matches), key=lambda x: x[0])
+    matches = []
+    for match in pattern.finditer(text):
+        # Get the actual section name from whichever group matched
+        section_name = None
+        for group in match.groups():
+            if group:
+                section_name = group.strip().lower()
+                # Normalize variations
+                section_name = section_name.replace(':', '').strip()
+                if 'method' in section_name:
+                    section_name = 'methods'
+                elif 'result' in section_name:
+                    section_name = 'results'
+                elif 'conclusion' in section_name:
+                    section_name = 'conclusion'
+                break
+        
+        if section_name:
+            matches.append((match.start(), section_name, match.end()))
     
     # If no sections found, return full text
-    if not all_matches:
-        return {"full": text}
+    if not matches:
+        return {"full_text": text}
     
-    # Extract text between headers
     sections = {}
-    for i, (start, name, header_end) in enumerate(all_matches):
-        # Get end position (start of next section or end of text)
-        if i + 1 < len(all_matches):
-            end = all_matches[i + 1][0]
+    for i, (start, name, header_end) in enumerate(matches):
+        # Get content until next section
+        if i + 1 < len(matches):
+            end = matches[i + 1][0]
         else:
             end = len(text)
         
-        # Extract content
         content = text[header_end:end].strip()
         
-        # For embedded headers, ensure we start with a capital letter
-        if content and not content[0].isupper():
-            match = re.search(r'[A-Z]', content)
-            if match:
-                content = content[match.start():]
-        
-        # Only add if we have substantial content (200+ chars)
-        if len(content) > 200:
-            # Keep first occurrence of each section
-            if name not in sections:
-                sections[name] = content
+        # Only keep if substantial (minimum 500 chars for a real section)
+        if len(content) > 500:
+            sections[name] = content[:10000]  # Cap each section
     
-    # If we found nothing substantial, return full text
-    if not sections:
-        return {"full": text}
-    
-    return sections
+    return sections if sections else {"full_text": text}
 
 def stitch_sections(sections: dict, max_sections: int = 6) -> str:
     """
