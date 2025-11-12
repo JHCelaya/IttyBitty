@@ -19,7 +19,7 @@
         }
         
         .container {
-            max-width: 900px;
+            max-width: 1000px;
             margin: 0 auto;
         }
         
@@ -75,27 +75,6 @@
             display: none;
         }
         
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
         .loading {
             text-align: center;
             padding: 2rem;
@@ -121,21 +100,19 @@
             margin-top: 2rem;
         }
         
-        .section {
-            margin-bottom: 1.5rem;
-        }
-        
-        .section-title {
-            color: #667eea;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            text-transform: capitalize;
-        }
-        
-        .section-content {
+        .primer-content {
             color: #333;
             line-height: 1.8;
+            white-space: pre-wrap;
+            font-size: 1rem;
+        }
+        
+        .primer-content strong {
+            color: #667eea;
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
         }
         
         .papers-list {
@@ -179,28 +156,28 @@
 <body>
     <div class="container">
         <div class="header">
-            <h1>📚 Scientific Paper Summarizer</h1>
-            <p>Upload a PDF and get an instant factual summary</p>
+            <h1>📚 Academic Paper Primer</h1>
+            <p>Get a comprehensive overview of any academic paper</p>
         </div>
         
         <div class="card">
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">📄</div>
                 <h3>Drop your PDF here or click to browse</h3>
-                <p style="margin-top: 0.5rem; color: #666;">Supports scientific papers in PDF format</p>
+                <p style="margin-top: 0.5rem; color: #666;">Works for any academic paper - science, humanities, theory</p>
                 <input type="file" id="fileInput" accept=".pdf">
             </div>
             
             <div id="loading" class="loading" style="display: none;">
                 <div class="spinner"></div>
-                <p>Processing your paper... This may take 1-2 minutes</p>
+                <p>Generating your primer... This takes 30-60 seconds</p>
             </div>
             
             <div id="error" class="error" style="display: none;"></div>
             
             <div id="summary" class="summary" style="display: none;">
                 <h2 id="paperTitle" style="margin-bottom: 1rem; color: #333;"></h2>
-                <div id="sections"></div>
+                <div id="primerContent" class="primer-content"></div>
             </div>
         </div>
         
@@ -219,7 +196,7 @@
         const error = document.getElementById('error');
         const summary = document.getElementById('summary');
         const paperTitle = document.getElementById('paperTitle');
-        const sections = document.getElementById('sections');
+        const primerContent = document.getElementById('primerContent');
         const papersList = document.getElementById('papersList');
         
         // Click to upload
@@ -253,98 +230,111 @@
                 showError('Please upload a PDF file');
                 return;
             }
-
-            // Reset UI
+            
+            // Hide previous results
             error.style.display = 'none';
             summary.style.display = 'none';
             loading.style.display = 'block';
-
+            
             const formData = new FormData();
             formData.append('file', file);
-
+            
             try {
                 const response = await fetch(`${API_URL}/upload`, {
                     method: 'POST',
-                    body: formData,
-                    // bust caches on some setups
-                    headers: { 'X-Requested-With': 'fetch' }
+                    body: formData
                 });
-
-                if (!response.ok) throw new Error('Upload failed');
-
-                const { paper_id } = await response.json();
-
-                // Start polling that paper until it's ready
-                await pollPaper(paper_id);
-
-                // Refresh “Previous Papers”
-                loadPapers();
+                
+                if (!response.ok) {
+                    throw new Error('Upload failed');
+                }
+                
+                const data = await response.json();
+                
+                // Poll for completion
+                pollForResult(data.paper_id);
+                
             } catch (err) {
                 showError('Error processing PDF. Please try again.');
                 console.error(err);
-            } finally {
                 loading.style.display = 'none';
             }
         }
-
-        async function pollPaper(id, { intervalMs = 2000, maxTries = 60 } = {}) {
-            for (let i = 0; i < maxTries; i++) {
-                // add a cache buster to avoid stale GETs
-                const response = await fetch(`${API_URL}/papers/${id}?t=${Date.now()}`, {
-                    headers: { 'X-Requested-With': 'fetch' },
-                    cache: 'no-store',
-                });
-
-                if (!response.ok) throw new Error('Failed to fetch paper status');
-
-                const paper = await response.json();
-
-                if (paper.status === 'complete') {
-                    displaySummary(paper);
+        
+        async function pollForResult(paperId) {
+            const maxAttempts = 60; // 60 attempts = 5 minutes
+            let attempts = 0;
+            
+            const poll = setInterval(async () => {
+                attempts++;
+                
+                if (attempts > maxAttempts) {
+                    clearInterval(poll);
+                    showError('Processing timeout. Please try again.');
+                    loading.style.display = 'none';
                     return;
                 }
-                if (paper.status === 'failed') {
-                    showError(paper.error || 'Processing failed. Please try again.');
-                    return;
+                
+                try {
+                    const response = await fetch(`${API_URL}/papers/${paperId}?t=${Date.now()}`);
+                    const paper = await response.json();
+                    
+                    if (paper.status === 'complete') {
+                        clearInterval(poll);
+                        displayPrimer(paper);
+                        loadPapers(); // Refresh list
+                        loading.style.display = 'none';
+                    } else if (paper.status === 'failed') {
+                        clearInterval(poll);
+                        showError('Processing failed: ' + (paper.error || 'Unknown error'));
+                        loading.style.display = 'none';
+                    }
+                    
+                } catch (err) {
+                    console.error('Poll error:', err);
                 }
-
-                // still processing
-                await new Promise(r => setTimeout(r, intervalMs));
-            }
-
-            showError('Timed out waiting for processing. Please try again.');
+                
+            }, 5000); // Check every 5 seconds
         }
-
-        function displaySummary(paper) {
-        // paper is the full object from GET /api/papers/{id}
-            paperTitle.textContent = paper.title || '(Untitled Paper)';
-            sections.innerHTML = '';
-
-            const order = ['abstract', 'introduction', 'methods', 'results', 'discussion', 'conclusion'];
-            const available = (paper.sections && typeof paper.sections === 'object') ? paper.sections : {};
-
-            let renderedAny = false;
-            for (const name of order) {
-                const content = available[name];
-                if (content && content.trim()) {
-                    const div = document.createElement('div');
-                    div.className = 'section';
-                    div.innerHTML = `
-                        <div class="section-title">${name}</div>
-                        <div class="section-content">${content}</div>
-                    `;
-                    sections.appendChild(div);
-                    renderedAny = true;
-                }
+        
+        function displayPrimer(paper) {
+            paperTitle.textContent = paper.title;
+            
+            // Get the primer text
+            let primerText = paper.primer;
+            
+            // Fallback to sections.primer if primer field doesn't exist
+            if (!primerText && paper.sections && paper.sections.primer) {
+                primerText = paper.sections.primer;
             }
-
-            if (!renderedAny) {
-                sections.innerHTML = `<p style="color:#666;">No sections available yet.</p>`;
+            
+            if (!primerText) {
+                primerText = "No primer generated. Please try again.";
             }
-
+            
+            // Display with preserved formatting
+            primerContent.innerHTML = formatPrimer(primerText);
+            
             summary.style.display = 'block';
         }
-
+        
+        function formatPrimer(text) {
+            // Convert markdown-style bold to HTML
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Convert bullet points
+            text = text.replace(/^• /gm, '&nbsp;&nbsp;• ');
+            
+            // Add some spacing
+            text = text.replace(/\n\n/g, '\n\n');
+            
+            return text;
+        }
+        
+        function showError(message) {
+            error.textContent = message;
+            error.style.display = 'block';
+        }
         
         async function loadPapers() {
             try {
@@ -369,27 +359,20 @@
         
         async function loadPaper(id) {
             try {
-                const response = await fetch(`${API_URL}/papers/${id}?t=${Date.now()}`, {
-                    headers: { 'X-Requested-With': 'fetch' },
-                    cache: 'no-store',
-                });
+                const response = await fetch(`${API_URL}/papers/${id}`);
                 const paper = await response.json();
-
-                if (paper.status === 'processing') {
-                    loading.style.display = 'block';
-                    await pollPaper(id);
-                } else if (paper.status === 'complete') {
-                    displaySummary(paper);
-                } else if (paper.status === 'failed') {
-                    showError(paper.error || 'Processing failed. Please try again.');
+                
+                if (paper.status === 'complete') {
+                    displayPrimer(paper);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else if (paper.status === 'processing') {
+                    showError('This paper is still being processed...');
+                    pollForResult(id);
+                } else {
+                    showError('Paper failed to process: ' + (paper.error || 'Unknown error'));
                 }
-
-                window.scrollTo({ top: 0, behavior: 'smooth' });
             } catch (err) {
                 showError('Error loading paper');
-                console.error(err);
-            } finally {
-                loading.style.display = 'none';
             }
         }
         
