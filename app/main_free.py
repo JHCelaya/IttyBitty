@@ -41,48 +41,82 @@ if not PAPERS_FILE.exists():
     PAPERS_FILE.write_text("[]")
 
 # ============================================================================
-# UNIVERSAL PRIMER PROMPT
+# IMPROVED MULTI-PASS PROMPT SYSTEM
 # ============================================================================
 
-UNIVERSAL_PRIMER_PROMPT = """
-Create a comprehensive primer for this academic paper.
+# Pass 1: Extract concrete facts
+FACT_EXTRACTION_PROMPT = """
+Extract specific, concrete facts from this academic paper.
 
-Structure your response exactly like this:
+For each category, provide SPECIFIC details (not vague descriptions):
 
-**ONE-SENTENCE SUMMARY**
-[Capture the core message in one clear sentence, max 25 words]
+**KEY TERMS & CONCEPTS**
+List 5-7 important terms/concepts with brief definitions. Example: "Time cells - hippocampal neurons that fire at specific moments rather than locations"
 
-**THE BIG IDEA**
-[What is the main argument or thesis? 2-3 sentences with specific details]
+**SPECIFIC FINDINGS**
+List 3-5 concrete findings with details. Include numbers, measurements, or specific examples where mentioned.
 
-**WHY IT MATTERS**
-[What's significant or novel? Why should anyone care? 2-3 sentences]
+**NAMED THEORIES/FRAMEWORKS**
+What specific theories, models, or frameworks are discussed? Include author names and years.
 
-**THE APPROACH**
-[How do they support their argument? What evidence or methods? 3-4 sentences with specifics]
+**STUDY DETAILS** (if applicable)
+- Sample: Who/what was studied? Include N=, species, demographics
+- Methods: What specific techniques or procedures?
+- Data: What specific measurements or analyses?
 
-**KEY TAKEAWAYS**
-• [First key point - specific, with details]
-• [Second key point]
-• [Third key point]
-• [Fourth key point]
+**CONCRETE EXAMPLES**
+What specific examples, cases, or illustrations are given?
 
-**CONCLUSION & IMPLICATIONS**
-[Main conclusion and what it means for the field. 2-3 sentences]
+Be SPECIFIC. Avoid phrases like "various aspects" or "the authors discuss". Include names, numbers, technical terms.
 
-**RELEVANT FOR**
-[Who should read this? What fields or audiences?]
-
-CRITICAL INSTRUCTIONS:
-- Be SPECIFIC: Include names, theories, numbers, examples from the paper
-- Avoid vague phrases like "the authors discuss" or "explores various aspects"
-- If it's a science paper, include sample sizes and key statistics
-- If it's theory, name the specific framework or model
-- If it's humanities, mention the texts or works analyzed
-- Focus on WHAT they found/argued, not just what they studied
-
-PAPER TEXT (First 6000 characters):
+PAPER TEXT:
 {text}
+
+EXTRACTED FACTS:"""
+
+# Pass 2: Build the narrative
+NARRATIVE_SYNTHESIS_PROMPT = """
+Using ONLY the facts extracted below, create a comprehensive primer for readers.
+
+EXTRACTED FACTS:
+{facts}
+
+Create a primer with these sections:
+
+**🎯 ONE-SENTENCE SUMMARY**
+[Max 30 words - capture the core argument with specific details]
+
+**📖 THE ARGUMENT IN PLAIN LANGUAGE**
+[3-4 sentences explaining the main claim. Use specific terms from the facts above. Make it concrete and vivid.]
+
+**💡 WHY THIS MATTERS**
+[2-3 sentences on significance. What changes? What's new? Be specific about impact.]
+
+**🔬 THE EVIDENCE**
+[4-5 sentences describing how they support their claim. Include:
+- Specific methods or approaches
+- Key findings with details from the facts
+- Concrete examples
+Use bullet points if it helps clarity]
+
+**✨ KEY INSIGHTS** 
+[4-5 bullet points of takeaways. Each should be:
+- Specific (include terms, numbers, names)
+- Actionable or memorable
+- Something a reader will remember]
+
+**🎓 BOTTOM LINE**
+[2-3 sentences: What's the conclusion? What are implications? Who benefits?]
+
+**👥 FOR READERS IN**
+[List specific fields, roles, or interests this serves]
+
+CRITICAL RULES:
+- Use SPECIFIC terms and details from the facts
+- No vague language ("various", "explores", "discusses")
+- Include names, numbers, technical terms
+- Make it vivid and concrete
+- Write for an intelligent reader who doesn't know the field
 
 PRIMER:"""
 
@@ -200,43 +234,75 @@ def clean_primer(text: str) -> str:
 # ============================================================================
 
 async def process_paper_background(paper_id: str, pdf_path: str):
-    """Generate universal primer for paper."""
+    """Generate universal primer using smart sampling from full paper."""
     try:
         print(f"\n[{paper_id}] Starting processing...")
         
-        # Step 1: Extract text
+        # Step 1: Extract full text
         raw_text = extract_text_by_page(pdf_path)
         print(f"[{paper_id}] Extracted {len(raw_text)} characters")
         
-        # Step 2: Take first 6000 chars (enough for most papers' main content)
-        # This captures intro and context without overwhelming the model
-        text_sample = raw_text[:6000]
+        # Step 2: Smart sampling - take from beginning, middle, end
+        total_len = len(raw_text)
         
-        # Step 3: Build prompt
-        prompt = UNIVERSAL_PRIMER_PROMPT.format(text=text_sample)
+        # Beginning: Abstract, intro (0-3000)
+        beginning = raw_text[:3000]
         
-        print(f"[{paper_id}] Generating primer...")
+        # Middle: Methods, results (from 30-60% through paper)
+        middle_start = int(total_len * 0.3)
+        middle_end = int(total_len * 0.6)
+        middle = raw_text[middle_start:middle_start + 3000]
         
-        # Step 4: Generate primer
-        primer = await generate_primer(prompt)
+        # End: Discussion, conclusion (last 3000 chars)
+        end = raw_text[-3000:] if total_len > 3000 else ""
+        
+        # Combine with markers
+        text_sample = f"""
+=== BEGINNING (Abstract & Introduction) ===
+{beginning}
+
+=== MIDDLE (Core Content) ===
+{middle}
+
+=== END (Discussion & Conclusion) ===
+{end}
+"""
+        
+        print(f"[{paper_id}] Created sample: {len(text_sample)} chars from full paper")
+        
+        # PASS 1: Extract concrete facts
+        print(f"[{paper_id}] Pass 1: Extracting facts...")
+        fact_prompt = FACT_EXTRACTION_PROMPT.format(text=text_sample)
+        facts = await generate_primer(fact_prompt)
+        
+        if facts.startswith("ERROR"):
+            print(f"[{paper_id}] Fact extraction failed: {facts}")
+            raise Exception(facts)
+        
+        print(f"[{paper_id}] Extracted {len(facts)} chars of facts")
+        
+        # PASS 2: Synthesize into primer
+        print(f"[{paper_id}] Pass 2: Synthesizing primer...")
+        synthesis_prompt = NARRATIVE_SYNTHESIS_PROMPT.format(facts=facts)
+        primer = await generate_primer(synthesis_prompt)
         
         if primer.startswith("ERROR"):
-            print(f"[{paper_id}] Generation failed: {primer}")
+            print(f"[{paper_id}] Synthesis failed: {primer}")
             raise Exception(primer)
         
-        # Step 5: Clean up
+        # Step 3: Clean up
         primer = clean_primer(primer)
         
         print(f"[{paper_id}] Generated {len(primer)} characters")
         
-        # Step 6: Save results
+        # Step 4: Save results
         papers = load_papers()
         for paper in papers:
             if paper["id"] == paper_id:
                 paper["status"] = "complete"
                 paper["primer"] = primer
-                # Keep for backwards compatibility
-                paper["sections"] = {"primer": primer}
+                paper["facts"] = facts  # Save facts too for debugging
+                paper["sections"] = {"primer": primer}  # Backwards compat
                 break
         save_papers(papers)
         
