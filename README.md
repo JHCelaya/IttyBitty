@@ -35,29 +35,31 @@ Summarize: Hugging Face API (BART model) generates summaries
 Store: Results saved locally in JSON format
 Display: Frontend shows structured summary
 
-Project Structure
-IttyBitty/
-├── app/
-│   ├── main_free.py       # FastAPI backend (production)
-│   ├── pdf_io.py          # PDF text extraction
-│   └── sections.py        # Section detection
-├── scripts/
-│   ├── benchmark.py       # Test different models
-│   ├── summarize.py       # Standalone CLI tool
-│   └── check_sections.py  # Debug section detection
-├── data/
-│   └── papers.json        # Paper database
-├── frontend.html          # Web interface
-└── requirements.txt       # Python dependencies
-Configuration
-Edit app/main_free.py to adjust:
-Summary Quality
-pythonSECTION_PROMPTS = {
-    "methods": """Your custom prompt here..."""
-}
-API Parameters
-python"parameters": {
-    "max_length": 300,      # Longer = more detail
-    "min_length": 80,       # Force minimum content
-    "num_beams": 4,         # Higher = better quality
+Project Structure  
+IttyBitty/  
+app/  
+    	main_free.py       # FastAPI backend (production)  
+    	pdf_io.py          # PDF text extraction  
+        sections.py        # Section detection  
+scripts/  
+        benchmark.py       # Test different models  
+        summarize.py       # Standalone CLI tool  
+        check_sections.py  # Debug section detection  
+data/  
+        papers.json        # Paper database  
+        frontend.html          # Web interface  
+        requirements.txt       # Python dependencies  
+        
+Configuration  
+Edit app/main_free.py to adjust:  
+Summary Quality  
+pythonSECTION_PROMPTS = {  
+    "methods": """Your custom prompt here..."""  
+}  
+
+API Parameters  
+python"parameters": {  
+    "max_length": 300,      # Longer = more detail  
+    "min_length": 80,       # Force minimum content  
+    "num_beams": 4,         # Higher = better quality  
 }
