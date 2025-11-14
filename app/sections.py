@@ -52,6 +52,7 @@ def _preclean(text: str) -> str:
     return text
 
 def split_into_sections(text: str) -> dict:
+<<<<<<< HEAD
     """
     Split paper text into sections based on headers.
     Returns dict mapping canonical section names to their text content.
@@ -102,23 +103,59 @@ def split_into_sections(text: str) -> dict:
     
     # Remove duplicates and sort by position
     all_matches = sorted(set(all_matches), key=lambda x: x[0])
+=======
+    """Improved section detection for academic papers."""
+    text = _preclean(text)
+    
+    # More comprehensive section patterns
+    section_patterns = [
+        # Numbered sections: "1. Introduction", "2.1 Methods"
+        r'^\s*\d+(?:\.\d+)*\.?\s+(Introduction|Methods?|Results?|Discussion|Conclusion)',
+        # Standalone headers
+        r'^\s*(ABSTRACT|INTRODUCTION|METHODS?|RESULTS?|DISCUSSION|CONCLUSIONS?)\s*$',
+        # With colons
+        r'^\s*(Abstract|Introduction|Methods?|Results?|Discussion|Conclusions?):\s*$',
+    ]
+    
+    combined_pattern = '|'.join(f'({p})' for p in section_patterns)
+    pattern = re.compile(combined_pattern, re.IGNORECASE | re.MULTILINE)
+    
+    matches = []
+    for match in pattern.finditer(text):
+        # Get the actual section name from whichever group matched
+        section_name = None
+        for group in match.groups():
+            if group:
+                section_name = group.strip().lower()
+                # Normalize variations
+                section_name = section_name.replace(':', '').strip()
+                if 'method' in section_name:
+                    section_name = 'methods'
+                elif 'result' in section_name:
+                    section_name = 'results'
+                elif 'conclusion' in section_name:
+                    section_name = 'conclusion'
+                break
+        
+        if section_name:
+            matches.append((match.start(), section_name, match.end()))
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
     
     # If no sections found, return full text
-    if not all_matches:
-        return {"full": text}
+    if not matches:
+        return {"full_text": text}
     
-    # Extract text between headers
     sections = {}
-    for i, (start, name, header_end) in enumerate(all_matches):
-        # Get end position (start of next section or end of text)
-        if i + 1 < len(all_matches):
-            end = all_matches[i + 1][0]
+    for i, (start, name, header_end) in enumerate(matches):
+        # Get content until next section
+        if i + 1 < len(matches):
+            end = matches[i + 1][0]
         else:
             end = len(text)
         
-        # Extract content
         content = text[header_end:end].strip()
         
+<<<<<<< HEAD
         # For embedded headers, ensure we start with a capital letter
         if content and not content[0].isupper():
             match = re.search(r'[A-Z]', content)
@@ -130,12 +167,13 @@ def split_into_sections(text: str) -> dict:
             # Keep first occurrence of each section
             if name not in sections:
                 sections[name] = content
+=======
+        # Only keep if substantial (minimum 500 chars for a real section)
+        if len(content) > 500:
+            sections[name] = content[:10000]  # Cap each section
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
     
-    # If we found nothing substantial, return full text
-    if not sections:
-        return {"full": text}
-    
-    return sections
+    return sections if sections else {"full_text": text}
 
 def stitch_sections(sections: dict, max_sections: int = 6) -> str:
     """

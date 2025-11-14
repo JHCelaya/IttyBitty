@@ -1,5 +1,6 @@
 [
   {
+<<<<<<< HEAD
     "id": "paper_1762467501148",
     "title": "Daniela Schiller - 2015",
     "filename": "Daniela Schiller - 2015.pdf",
@@ -38,5 +39,244 @@
       "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights considerable evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) The experiments discussed here support the idea that the hippocampus embodies each of these properties."
     },
     "model": "facebook/bart-large-cnn"
+=======
+    "id": "paper_1762824931517",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:35:31.517465",
+    "status": "complete",
+    "sections": {
+      "abstract": "Processing failed. Please try again.",
+      "introduction": "Processing failed. Please try again.",
+      "results": "Processing failed. Please try again.",
+      "conclusion": "Processing failed. Please try again."
+    }
+  },
+  {
+    "id": "paper_1762825360256",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:42:40.256063",
+    "status": "complete",
+    "sections": {
+      "abstract": "Processing failed. Please try again.",
+      "introduction": "Processing failed. Please try again.",
+      "results": "Processing failed. Please try again.",
+      "conclusion": "Processing failed. Please try again."
+    }
+  },
+  {
+    "id": "paper_1762825548640",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:45:48.640337",
+    "status": "complete",
+    "sections": {
+      "abstract": "Processing failed. Please try again.",
+      "introduction": "Processing failed. Please try again.",
+      "results": "Processing failed. Please try again.",
+      "conclusion": "Processing failed. Please try again."
+    }
+  },
+  {
+    "id": "paper_1762825656992",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:47:36.992249",
+    "status": "complete",
+    "sections": {
+      "abstract": "Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract \u201cspace\u201d supported by the hippocampus is the organization of memories in time.",
+      "introduction": "One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain's capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.",
+      "results": "In studies on animals, the robust observation of hippocampal place cells has long been used to advance the idea that the neuronal networks in the hippocampus parse spatial context into representations of locations in space. However, recent studies have shown that, consistent with its key role in temporally organized memory, the hippocampus also parses temporally structured experiences.",
+      "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) These recent observations suggest that our understanding of how the hippocampus supports memory and navigation may best be advanced."
+    }
+  },
+  {
+    "id": "paper_1762825702612",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:48:22.612146",
+    "status": "complete",
+    "sections": {
+      "abstract": "Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract \u201cspace\u201d supported by the hippocampus is the organization of memories in time.",
+      "introduction": "One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain's capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.",
+      "results": "In studies on animals, the robust observation of hippocampal place cells has long been used to advance the idea that the neuronal networks in the hippocampus parse spatial context into representations of locations in space. However, recent studies have shown that, consistent with its key role in temporally organized memory, the hippocampus also parses temporally structured experiences.",
+      "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) These recent observations suggest that our understanding of how the hippocampus supports memory and navigation may best be advanced."
+    }
+  },
+  {
+    "id": "paper_1762825977799",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:52:57.799547",
+    "status": "complete",
+    "sections": {
+      "abstract": "Processing failed. Please try again.",
+      "introduction": "Processing failed. Please try again.",
+      "results": "Processing failed. Please try again.",
+      "conclusion": "Processing failed. Please try again."
+    }
+  },
+  {
+    "id": "paper_1762826207333",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T17:56:47.334005",
+    "status": "complete",
+    "sections": {
+      "abstract": "Processing failed. Please try again.",
+      "introduction": "Processing failed. Please try again.",
+      "results": "Processing failed. Please try again.",
+      "conclusion": "Processing failed. Please try again."
+    }
+  },
+  {
+    "id": "paper_1762827936380",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T18:25:36.380580",
+    "status": "complete",
+    "sections": {
+      "abstract": "Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract \u201cspace\u201d supported by the hippocampus is the organization of memories in time.",
+      "introduction": "One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain's capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.",
+      "results": "In studies on animals, the robust observation of hippocampal place cells has long been used to advance the idea that the neuronal networks in the hippocampus parse spatial context into representations of locations in space. However, recent studies have shown that, consistent with its key role in temporally organized memory, the hippocampus also parses temporally structured experiences.",
+      "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) These recent observations suggest that our understanding of how the hippocampus supports memory and navigation may best be advanced."
+    }
+  },
+  {
+    "id": "paper_1762828728364",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-10T18:38:48.364285",
+    "status": "complete",
+    "sections": {
+      "abstract": "Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract \u201cspace\u201d supported by the hippocampus is the organization of memories in time.",
+      "introduction": "One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain's capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.",
+      "results": "In studies on animals, the robust observation of hippocampal place cells has long been used to advance the idea that the neuronal networks in the hippocampus parse spatial context into representations of locations in space. However, recent studies have shown that, consistent with its key role in temporally organized memory, the hippocampus also parses temporally structured experiences.",
+      "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) These recent observations suggest that our understanding of how the hippocampus supports memory and navigation may best be advanced."
+    }
+  },
+  {
+    "id": "paper_1762828876652",
+    "title": "papieren",
+    "filename": "papieren.pdf",
+    "upload_date": "2025-11-10T18:41:16.652771",
+    "status": "complete",
+    "sections": {
+      "abstract": "Received: 15 June 2020; Accepted: 1 December 2020. Format as 3 clear sentences. Use ONLY information from the text. Data availability. Full electrophysiology data set will be uploaded to http://crcns.org/ upon acceptance for publication.",
+      "methods": "Each reward delivery was preceded by a brief sound caused by the advance of the pellet dispenser. Reward-related \ufb01ring was extracted from inter-trial intervals, when no cues were presented. Pre-reward and post-rewards never differed from zero for Intermediate \ufffdakring neurons.",
+      "results": "The ventral pallidum (VP) is a compelling candidate for a neural source of relative threat. The VP is consistently implicated in reward processes21,24\u201330. VP neurons acquire \ufb01ring to reward-predictive cues31,33,34,35.",
+      "discussion": "VP single-unit activity while rats discriminated danger, uncertainty and safety. Most VP neurons were maximally responsive to danger. Cue-inhibited neuron types (Low and Intermediate) dynamically signaled relative threat. Initial relative threat signaling was precise, with neurons decreasing cue \ufb01ring in proportion to the actual foot shock probability."
+    }
+  },
+  {
+    "id": "paper_1762908978107",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T16:56:18.107937",
+    "status": "failed",
+    "primer": null,
+    "sections": null,
+    "error": "ERROR: Hugging Face API key not configured"
+  },
+  {
+    "id": "paper_1762908983826",
+    "title": "papieren",
+    "filename": "papieren.pdf",
+    "upload_date": "2025-11-11T16:56:23.826860",
+    "status": "failed",
+    "primer": null,
+    "sections": null,
+    "error": "ERROR: Hugging Face API key not configured"
+  },
+  {
+    "id": "paper_1762909151469",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T16:59:11.469864",
+    "status": "complete",
+    "primer": "Create a comprehensive primer for this academic paper. Structure your response exactly like this. Include names, theories, numbers, examples from the paper. Avoid vague phrases like \"the authors discuss\" or \"explores various aspects\" If it's a science paper, include sample sizes and key statistics. If it is a humanities paper, mention the texts or works analyzed.",
+    "sections": {
+      "primer": "Create a comprehensive primer for this academic paper. Structure your response exactly like this. Include names, theories, numbers, examples from the paper. Avoid vague phrases like \"the authors discuss\" or \"explores various aspects\" If it's a science paper, include sample sizes and key statistics. If it is a humanities paper, mention the texts or works analyzed."
+    }
+  },
+  {
+    "id": "paper_1762909670729",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T17:07:50.729121",
+    "status": "failed",
+    "primer": null,
+    "sections": null,
+    "error": "ERROR: Error code: 429 - {'error': {'message': 'You exceeded your current quota, please check your plan and billing details. For more information on this error, read the docs: https://platform.openai.com/docs/guides/error-codes/api-errors.', 'type': 'insufficient_quota', 'param': None, 'code': 'insufficient_quota'}}"
+  },
+  {
+    "id": "paper_1762909858240",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T17:10:58.240395",
+    "status": "complete",
+    "primer": "**ONE-SENTENCE SUMMARY**\nThe paper proposes reconciling the debate on hippocampal function by viewing it as organizing information within a cognitive map, integrating spatial and memory functions.\n\n**THE BIG IDEA**\nThe main argument is that the hippocampus functions as a cognitive map, organizing experiences across various cognitive domains, bridging the gap between theories of its role in memory and spatial navigation.\n\n**WHY IT MATTERS**\nThis paper is significant as it offers a novel perspective on hippocampal function, suggesting that it supports a broad range of cognitive maps beyond spatial navigation, providing insights into memory and cognitive processing.\n\n**THE APPROACH**\nThe authors support their argument by reviewing recent studies in animals and humans that demonstrate hippocampal networks organizing specific experiences within a cognitive map, reflecting behavior guided through these maps, and conceptualizing the hippocampus as organizing information within a multidimensional cognitive map.\n\n**KEY TAKEAWAYS**\n\u2022 The hippocampus functions as a cognitive map, organizing experiences across spatial, temporal, and associational contexts.\n\u2022 Recent studies show that hippocampal networks support a broad range of cognitive maps beyond spatial navigation.\n\u2022 Network activity patterns in the hippocampus reflect behavior guided through cognitive maps.\n\u2022 The paper bridges theories of hippocampal function by emphasizing its role in organizing incoming information within cognitive maps.\n\n**CONCLUSION & IMPLICATIONS**\nThe paper concludes that the hippocampus serves as a cognitive map, organizing information across various cognitive domains, offering a new perspective on its role in memory and spatial navigation.\n\n**RELEVANT FOR**\nThis paper is relevant for researchers in neuroscience, cognitive psychology, and memory studies, as well as professionals interested in understanding the cognitive mechanisms underlying memory and spatial navigation.",
+    "sections": {
+      "primer": "**ONE-SENTENCE SUMMARY**\nThe paper proposes reconciling the debate on hippocampal function by viewing it as organizing information within a cognitive map, integrating spatial and memory functions.\n\n**THE BIG IDEA**\nThe main argument is that the hippocampus functions as a cognitive map, organizing experiences across various cognitive domains, bridging the gap between theories of its role in memory and spatial navigation.\n\n**WHY IT MATTERS**\nThis paper is significant as it offers a novel perspective on hippocampal function, suggesting that it supports a broad range of cognitive maps beyond spatial navigation, providing insights into memory and cognitive processing.\n\n**THE APPROACH**\nThe authors support their argument by reviewing recent studies in animals and humans that demonstrate hippocampal networks organizing specific experiences within a cognitive map, reflecting behavior guided through these maps, and conceptualizing the hippocampus as organizing information within a multidimensional cognitive map.\n\n**KEY TAKEAWAYS**\n\u2022 The hippocampus functions as a cognitive map, organizing experiences across spatial, temporal, and associational contexts.\n\u2022 Recent studies show that hippocampal networks support a broad range of cognitive maps beyond spatial navigation.\n\u2022 Network activity patterns in the hippocampus reflect behavior guided through cognitive maps.\n\u2022 The paper bridges theories of hippocampal function by emphasizing its role in organizing incoming information within cognitive maps.\n\n**CONCLUSION & IMPLICATIONS**\nThe paper concludes that the hippocampus serves as a cognitive map, organizing information across various cognitive domains, offering a new perspective on its role in memory and spatial navigation.\n\n**RELEVANT FOR**\nThis paper is relevant for researchers in neuroscience, cognitive psychology, and memory studies, as well as professionals interested in understanding the cognitive mechanisms underlying memory and spatial navigation."
+    }
+  },
+  {
+    "id": "paper_1762909968190",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T17:12:48.190308",
+    "status": "complete",
+    "primer": "**ONE-SENTENCE SUMMARY**\nThe paper explores the reconciliation of divergent views on hippocampal function, proposing a cognitive map framework to integrate spatial navigation and memory functions.\n\n**THE BIG IDEA**\nThe main argument is that the hippocampus serves as a cognitive map, organizing experiences across various cognitive domains, bridging the gap between its roles in spatial navigation and memory formation.\n\n**WHY IT MATTERS**\nThis paper is significant as it offers a comprehensive framework that goes beyond traditional views, shedding light on how the hippocampus supports a broad range of cognitive maps beyond just spatial navigation, impacting memory research and cognitive neuroscience.\n\n**THE APPROACH**\nThe authors support their argument by reviewing recent studies in animals and humans that demonstrate hippocampal networks organizing experiences within a multidimensional cognitive map, reflecting behavior guided by these maps, and propose a reconciliation of the memory and spatial views of hippocampal function.\n\n**KEY TAKEAWAYS**\n\u2022 The hippocampus functions as a cognitive map, organizing information within spatial, temporal, and associational contexts.\n\u2022 Recent studies show hippocampal networks support a range of cognitive maps beyond spatial navigation.\n\u2022 The paper bridges theories by conceptualizing the hippocampus as organizing incoming information within a cognitive map.\n\u2022 Cognitive maps guide behavior across various cognitive domains, offering insights into hippocampal function.\n\n**CONCLUSION & IMPLICATIONS**\nThe paper concludes that the hippocampus serves as a system supporting diverse cognitive maps, offering new insights into its function beyond traditional views of spatial navigation and memory, which could revolutionize research in memory and cognitive neuroscience.\n\n**RELEVANT FOR**\nThis paper is relevant for researchers and scholars in the fields of neuroscience, cognitive psychology, memory research, and spatial cognition, as well as anyone interested in understanding the complex functions of the hippocampus and cognitive mapping in the brain.",
+    "sections": {
+      "primer": "**ONE-SENTENCE SUMMARY**\nThe paper explores the reconciliation of divergent views on hippocampal function, proposing a cognitive map framework to integrate spatial navigation and memory functions.\n\n**THE BIG IDEA**\nThe main argument is that the hippocampus serves as a cognitive map, organizing experiences across various cognitive domains, bridging the gap between its roles in spatial navigation and memory formation.\n\n**WHY IT MATTERS**\nThis paper is significant as it offers a comprehensive framework that goes beyond traditional views, shedding light on how the hippocampus supports a broad range of cognitive maps beyond just spatial navigation, impacting memory research and cognitive neuroscience.\n\n**THE APPROACH**\nThe authors support their argument by reviewing recent studies in animals and humans that demonstrate hippocampal networks organizing experiences within a multidimensional cognitive map, reflecting behavior guided by these maps, and propose a reconciliation of the memory and spatial views of hippocampal function.\n\n**KEY TAKEAWAYS**\n\u2022 The hippocampus functions as a cognitive map, organizing information within spatial, temporal, and associational contexts.\n\u2022 Recent studies show hippocampal networks support a range of cognitive maps beyond spatial navigation.\n\u2022 The paper bridges theories by conceptualizing the hippocampus as organizing incoming information within a cognitive map.\n\u2022 Cognitive maps guide behavior across various cognitive domains, offering insights into hippocampal function.\n\n**CONCLUSION & IMPLICATIONS**\nThe paper concludes that the hippocampus serves as a system supporting diverse cognitive maps, offering new insights into its function beyond traditional views of spatial navigation and memory, which could revolutionize research in memory and cognitive neuroscience.\n\n**RELEVANT FOR**\nThis paper is relevant for researchers and scholars in the fields of neuroscience, cognitive psychology, memory research, and spatial cognition, as well as anyone interested in understanding the complex functions of the hippocampus and cognitive mapping in the brain."
+    }
+  },
+  {
+    "id": "paper_1762910112881",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T17:15:12.881496",
+    "status": "complete",
+    "primer": "**ONE-SENTENCE SUMMARY**\nThe paper proposes reconciling the hippocampus's role in memory and spatial navigation by viewing it as organizing information within a cognitive map.\n\n**THE BIG IDEA**\nThe main argument is that the hippocampus functions as a cognitive map, organizing experiences across various cognitive domains, bridging the gap between its roles in memory and spatial navigation.\n\n**WHY IT MATTERS**\nThis paper is significant as it offers a comprehensive framework to understand the hippocampus's function, challenging traditional views and providing new insights into how the brain organizes information across spatial, temporal, and associational contexts.\n\n**THE APPROACH**\nThe authors support their argument by reviewing recent studies in animals and humans that demonstrate hippocampal networks supporting a broad range of cognitive maps, organizing specific experiences within relevant contexts, and reflecting behavior guided by cognitive maps. They draw on Tolman's concept of a cognitive map and recent theoretical reviews to propose a unified view of hippocampal function.\n\n**KEY TAKEAWAYS**\n\u2022 The hippocampus serves as a cognitive map, organizing information across spatial, temporal, and associational contexts.\n\u2022 Recent studies in animals and humans show that hippocampal networks support a wide range of cognitive maps.\n\u2022 The paper bridges the gap between the memory and spatial views of hippocampal function by conceptualizing it as organizing incoming information within a multidimensional cognitive map.\n\u2022 Consensus between memory and spatial views is emerging through expanded approaches in both humans and animals.\n\n**CONCLUSION & IMPLICATIONS**\nThe paper concludes that the hippocampus functions as a system supporting a broad range of cognitive maps, offering new insights into its role beyond traditional memory and spatial navigation functions, which has implications for understanding brain function and cognitive processes.\n\n**RELEVANT FOR**\nThis paper is relevant for neuroscientists, cognitive psychologists, and researchers interested in memory, spatial navigation, and hippocampal function, providing a novel perspective on how the brain organizes information across different cognitive domains.",
+    "sections": {
+      "primer": "**ONE-SENTENCE SUMMARY**\nThe paper proposes reconciling the hippocampus's role in memory and spatial navigation by viewing it as organizing information within a cognitive map.\n\n**THE BIG IDEA**\nThe main argument is that the hippocampus functions as a cognitive map, organizing experiences across various cognitive domains, bridging the gap between its roles in memory and spatial navigation.\n\n**WHY IT MATTERS**\nThis paper is significant as it offers a comprehensive framework to understand the hippocampus's function, challenging traditional views and providing new insights into how the brain organizes information across spatial, temporal, and associational contexts.\n\n**THE APPROACH**\nThe authors support their argument by reviewing recent studies in animals and humans that demonstrate hippocampal networks supporting a broad range of cognitive maps, organizing specific experiences within relevant contexts, and reflecting behavior guided by cognitive maps. They draw on Tolman's concept of a cognitive map and recent theoretical reviews to propose a unified view of hippocampal function.\n\n**KEY TAKEAWAYS**\n\u2022 The hippocampus serves as a cognitive map, organizing information across spatial, temporal, and associational contexts.\n\u2022 Recent studies in animals and humans show that hippocampal networks support a wide range of cognitive maps.\n\u2022 The paper bridges the gap between the memory and spatial views of hippocampal function by conceptualizing it as organizing incoming information within a multidimensional cognitive map.\n\u2022 Consensus between memory and spatial views is emerging through expanded approaches in both humans and animals.\n\n**CONCLUSION & IMPLICATIONS**\nThe paper concludes that the hippocampus functions as a system supporting a broad range of cognitive maps, offering new insights into its role beyond traditional memory and spatial navigation functions, which has implications for understanding brain function and cognitive processes.\n\n**RELEVANT FOR**\nThis paper is relevant for neuroscientists, cognitive psychologists, and researchers interested in memory, spatial navigation, and hippocampal function, providing a novel perspective on how the brain organizes information across different cognitive domains."
+    }
+  },
+  {
+    "id": "paper_1762910202958",
+    "title": "papieren",
+    "filename": "papieren.pdf",
+    "upload_date": "2025-11-11T17:16:42.958478",
+    "status": "complete",
+    "primer": "**ONE-SENTENCE SUMMARY**\nVentral pallidum neurons in rats dynamically signal relative threat by decreasing firing in response to cues predicting foot shock probabilities.\n\n**THE BIG IDEA**\nThe main argument is that ventral pallidum (VP) neurons serve as a neural source of relative threat signaling, with two distinct populations showing dynamic responses to reward and aversive cues, particularly decreasing firing to uncertain threats as danger approaches.\n\n**WHY IT MATTERS**\nThis study sheds light on how the brain processes relative threat, offering insights into adaptive fear responses and the neural mechanisms underlying threat discrimination, which can have implications for understanding anxiety disorders and fear-related behaviors.\n\n**THE APPROACH**\nThe authors recorded single-unit activity in the VP of male rats as they discriminated cues predicting foot shock probabilities, revealing distinct neural responses to danger, uncertainty, and safety cues. They used suppression of rewarded nose poking as a measure of fear output and implanted microelectrode bundles to record VP activity during fear discrimination.\n\n**KEY TAKEAWAYS**\n\u2022 VP neurons dynamically signal relative threat by decreasing firing in response to cues predicting foot shock probabilities.\n\u2022 Two distinct VP populations show differential responses to reward and aversive cues, with one population specifically signaling relative threat.\n\u2022 The study highlights the VP as a neural source of dynamic, relative threat signaling, distinct from general value signaling.\n\u2022 Results suggest that VP neurons play a crucial role in processing relative threat and contribute to adaptive fear responses.\n\n**CONCLUSION & IMPLICATIONS**\nThe findings support the VP as a key region for processing relative threat signals, offering insights into how the brain distinguishes between different levels of threat and shapes fear responses, with potential implications for understanding fear-related disorders and developing targeted interventions.\n\n**RELEVANT FOR**\nResearchers and practitioners in neuroscience, psychology, and behavioral biology interested in understanding the neural mechanisms of threat processing, fear discrimination, and adaptive fear responses.",
+    "sections": {
+      "primer": "**ONE-SENTENCE SUMMARY**\nVentral pallidum neurons in rats dynamically signal relative threat by decreasing firing in response to cues predicting foot shock probabilities.\n\n**THE BIG IDEA**\nThe main argument is that ventral pallidum (VP) neurons serve as a neural source of relative threat signaling, with two distinct populations showing dynamic responses to reward and aversive cues, particularly decreasing firing to uncertain threats as danger approaches.\n\n**WHY IT MATTERS**\nThis study sheds light on how the brain processes relative threat, offering insights into adaptive fear responses and the neural mechanisms underlying threat discrimination, which can have implications for understanding anxiety disorders and fear-related behaviors.\n\n**THE APPROACH**\nThe authors recorded single-unit activity in the VP of male rats as they discriminated cues predicting foot shock probabilities, revealing distinct neural responses to danger, uncertainty, and safety cues. They used suppression of rewarded nose poking as a measure of fear output and implanted microelectrode bundles to record VP activity during fear discrimination.\n\n**KEY TAKEAWAYS**\n\u2022 VP neurons dynamically signal relative threat by decreasing firing in response to cues predicting foot shock probabilities.\n\u2022 Two distinct VP populations show differential responses to reward and aversive cues, with one population specifically signaling relative threat.\n\u2022 The study highlights the VP as a neural source of dynamic, relative threat signaling, distinct from general value signaling.\n\u2022 Results suggest that VP neurons play a crucial role in processing relative threat and contribute to adaptive fear responses.\n\n**CONCLUSION & IMPLICATIONS**\nThe findings support the VP as a key region for processing relative threat signals, offering insights into how the brain distinguishes between different levels of threat and shapes fear responses, with potential implications for understanding fear-related disorders and developing targeted interventions.\n\n**RELEVANT FOR**\nResearchers and practitioners in neuroscience, psychology, and behavioral biology interested in understanding the neural mechanisms of threat processing, fear discrimination, and adaptive fear responses."
+    }
+  },
+  {
+    "id": "paper_1762910738132",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T17:25:38.132394",
+    "status": "complete",
+    "primer": "**\ud83c\udfaf ONE-SENTENCE SUMMARY**\nPlace cells in the hippocampus encode specific locations, linking spatial firing patterns to navigational computations, challenging the consensus between memory and spatial views in understanding cognitive maps.\n\n**\ud83d\udcd6 THE ARGUMENT IN PLAIN LANGUAGE**\nThe hippocampus contains place cells that fire when an animal moves through specific locations, while the entorhinal cortex shows spatial firing patterns, aiding in creating mental maps of physical space. These findings challenge the traditional divide between memory and spatial navigation, suggesting memory is a form of mental navigation evolved from real-world navigation.\n\n**\ud83d\udca1 WHY THIS MATTERS**\nUnderstanding how the brain encodes spatial information and navigational computations not only sheds light on memory processes but also has implications for cognitive mapping and how we perceive and interact with our environment.\n\n**\ud83d\udd2c THE EVIDENCE**\n- O\u2019Keefe and Dostrovsky (1971) discovered place cells in the hippocampus that activate in specific locations.\n- Moser et al. (2008) and Hartley et al. (2014) identified spatial firing patterns in the entorhinal cortex and other areas, crucial for mapping physical space.\n- Studies on patient H.M. and other animals with damage to medial temporal lobe structures, like rats and non-human primates, have shown dense amnesia, linking the hippocampus to declarative memory.\n\n**\u2728 KEY INSIGHTS**\n- Place cells in the hippocampus fire at specific locations in an environment.\n- Spatial firing patterns in the entorhinal cortex encode spatial information.\n- Memory and spatial navigation may share neural algorithms.\n- Damage to medial temporal lobe structures can lead to dense amnesia.\n- Understanding navigational computations can enhance our knowledge of memory processes.\n\n**\ud83c\udf93 BOTTOM LINE**\nThe integration of place cells, spatial firing patterns, and navigational computations challenges traditional views on memory and spatial navigation, with implications for understanding cognitive maps and memory formation, benefiting neuroscientists, psychologists, and researchers in spatial cognition.\n\n**\ud83d\udc65 FOR READERS IN**\n- Neuroscience\n- Psychology\n- Cognitive science",
+    "sections": {
+      "primer": "**\ud83c\udfaf ONE-SENTENCE SUMMARY**\nPlace cells in the hippocampus encode specific locations, linking spatial firing patterns to navigational computations, challenging the consensus between memory and spatial views in understanding cognitive maps.\n\n**\ud83d\udcd6 THE ARGUMENT IN PLAIN LANGUAGE**\nThe hippocampus contains place cells that fire when an animal moves through specific locations, while the entorhinal cortex shows spatial firing patterns, aiding in creating mental maps of physical space. These findings challenge the traditional divide between memory and spatial navigation, suggesting memory is a form of mental navigation evolved from real-world navigation.\n\n**\ud83d\udca1 WHY THIS MATTERS**\nUnderstanding how the brain encodes spatial information and navigational computations not only sheds light on memory processes but also has implications for cognitive mapping and how we perceive and interact with our environment.\n\n**\ud83d\udd2c THE EVIDENCE**\n- O\u2019Keefe and Dostrovsky (1971) discovered place cells in the hippocampus that activate in specific locations.\n- Moser et al. (2008) and Hartley et al. (2014) identified spatial firing patterns in the entorhinal cortex and other areas, crucial for mapping physical space.\n- Studies on patient H.M. and other animals with damage to medial temporal lobe structures, like rats and non-human primates, have shown dense amnesia, linking the hippocampus to declarative memory.\n\n**\u2728 KEY INSIGHTS**\n- Place cells in the hippocampus fire at specific locations in an environment.\n- Spatial firing patterns in the entorhinal cortex encode spatial information.\n- Memory and spatial navigation may share neural algorithms.\n- Damage to medial temporal lobe structures can lead to dense amnesia.\n- Understanding navigational computations can enhance our knowledge of memory processes.\n\n**\ud83c\udf93 BOTTOM LINE**\nThe integration of place cells, spatial firing patterns, and navigational computations challenges traditional views on memory and spatial navigation, with implications for understanding cognitive maps and memory formation, benefiting neuroscientists, psychologists, and researchers in spatial cognition.\n\n**\ud83d\udc65 FOR READERS IN**\n- Neuroscience\n- Psychology\n- Cognitive science"
+    },
+    "facts": "**KEY TERMS & CONCEPTS**\n1. Place cells - hippocampal neurons that fire when an animal moves through specific locations in an environment.\n2. Cognitive map - Tolman's conception of a mental representation that organizes experience and guides behavior across various cognitive domains.\n3. Declarative memory - Memory for specific experiences and general knowledge gained from them.\n4. Spatial firing patterns - Neuronal activity patterns in the hippocampus and entorhinal cortex that encode spatial information.\n5. Navigational computations - Processes carried out by the hippocampal system to calculate routes through physical space.\n\n**SPECIFIC FINDINGS**\n1. Discovery of place cells in the hippocampus that fire when an animal moves through specific locations in an environment (O\u2019Keefe and Dostrovsky, 1971).\n2. Identification of spatial firing patterns in the entorhinal cortex and other areas supporting the creation of maps of physical space (Moser et al., 2008; Hartley et al., 2014).\n3. Difficulty in achieving consensus between memory and spatial views due to differences in species and experimental approaches.\n\n**NAMED THEORIES/FRAMEWORKS**\n- Buzsa\u00b4ki and Moser (2013) proposed that memory is a form of navigation in mental space that evolved from, and relies on, neural algorithms of navigation in the real world.\n\n**CONCRETE EXAMPLES**\n- Patient H.M. suffered dense amnesia following removal of the hippocampus and neighboring regions, linking the hippocampus to declarative memory.\n- Studies in rats, non-human primates, and human patients have demonstrated dense amnesia after damage to medial temporal lobe structures (Cohen and Squire, 1980; Eichenbaum, 2004)."
+  },
+  {
+    "id": "paper_1762911069251",
+    "title": "schiller 2015",
+    "filename": "schiller 2015.pdf",
+    "upload_date": "2025-11-11T17:31:09.251344",
+    "status": "complete",
+    "primer": "**\ud83c\udfaf ONE-SENTENCE SUMMARY**\nProfessional piano tuners and London taxi drivers exhibit larger hippocampal gray matter due to their specialized spatial knowledge, demonstrating the hippocampus' role in memory and cognitive mapping.\n\n**\ud83d\udcd6 THE ARGUMENT IN PLAIN LANGUAGE**\nThe hippocampus, a brain region crucial for memory, creates cognitive maps guiding behavior. Studies on piano tuners and taxi drivers show that specialized knowledge leads to larger hippocampal gray matter, supporting Tolman's theory of cognitive maps organizing experience.\n\n**\ud83d\udca1 WHY THIS MATTERS**\nUnderstanding how the brain forms cognitive maps can enhance memory research and potentially aid in developing strategies to improve memory and spatial navigation skills.\n\n**\ud83d\udd2c THE EVIDENCE**\n- Teki et al. (2012) found that professional piano tuners with more experience had larger hippocampal gray matter.\n- Maguire et al. (2000) demonstrated that London taxi drivers, with extensive spatial knowledge, had larger hippocampi.\n- Tavares et al. (2015) showed hippocampal activation tracking social space dimensions during a social role-playing game.\n\n**\u2728 KEY INSIGHTS**\n- Specialized knowledge can lead to structural changes in the brain.\n- The hippocampus plays a crucial role in forming spatial cognitive maps.\n- Memory and spatial navigation are interconnected in the brain.\n- Tolman's theory of cognitive maps is supported by empirical evidence.\n- Social dimensions can also influence hippocampal activation.\n\n**\ud83c\udf93 BOTTOM LINE**\nThe hippocampus is not just for memory but also for creating cognitive maps, influenced by specialized knowledge and social dimensions, with implications for memory enhancement and spatial navigation strategies.\n\n**\ud83d\udc65 FOR READERS IN**\n- Neuroscience\n- Psychology\n- Memory research\n- Spatial navigation studies",
+    "sections": {
+      "primer": "**\ud83c\udfaf ONE-SENTENCE SUMMARY**\nProfessional piano tuners and London taxi drivers exhibit larger hippocampal gray matter due to their specialized spatial knowledge, demonstrating the hippocampus' role in memory and cognitive mapping.\n\n**\ud83d\udcd6 THE ARGUMENT IN PLAIN LANGUAGE**\nThe hippocampus, a brain region crucial for memory, creates cognitive maps guiding behavior. Studies on piano tuners and taxi drivers show that specialized knowledge leads to larger hippocampal gray matter, supporting Tolman's theory of cognitive maps organizing experience.\n\n**\ud83d\udca1 WHY THIS MATTERS**\nUnderstanding how the brain forms cognitive maps can enhance memory research and potentially aid in developing strategies to improve memory and spatial navigation skills.\n\n**\ud83d\udd2c THE EVIDENCE**\n- Teki et al. (2012) found that professional piano tuners with more experience had larger hippocampal gray matter.\n- Maguire et al. (2000) demonstrated that London taxi drivers, with extensive spatial knowledge, had larger hippocampi.\n- Tavares et al. (2015) showed hippocampal activation tracking social space dimensions during a social role-playing game.\n\n**\u2728 KEY INSIGHTS**\n- Specialized knowledge can lead to structural changes in the brain.\n- The hippocampus plays a crucial role in forming spatial cognitive maps.\n- Memory and spatial navigation are interconnected in the brain.\n- Tolman's theory of cognitive maps is supported by empirical evidence.\n- Social dimensions can also influence hippocampal activation.\n\n**\ud83c\udf93 BOTTOM LINE**\nThe hippocampus is not just for memory but also for creating cognitive maps, influenced by specialized knowledge and social dimensions, with implications for memory enhancement and spatial navigation strategies.\n\n**\ud83d\udc65 FOR READERS IN**\n- Neuroscience\n- Psychology\n- Memory research\n- Spatial navigation studies"
+    },
+    "facts": "**KEY TERMS & CONCEPTS**\n1. Hippocampus: Brain region contributing to memory.\n2. Cognitive map: Organizing experience and guiding behavior across all domains of cognition.\n3. Declarative memory: Ability to retrieve specific experiences and general knowledge.\n4. Spatial cognitive maps: Maps created by the hippocampus for navigation.\n5. Episodic memory: Memory for specific events or episodes.\n6. Social space: Incorporates dimensions like power and affiliation.\n7. Gray matter volume: Volume of brain tissue containing cell bodies.\n\n**SPECIFIC FINDINGS**\n1. Teki et al. (2012) found larger hippocampal gray matter in professional piano tuners as a function of years of piano tuning.\n2. Maguire et al. (2000) showed that London taxi drivers had larger hippocampi due to knowledge of London's layout.\n3. Tavares et al. (2015) demonstrated hippocampal activation tracking social space dimensions during a social role-playing game.\n\n**NAMED THEORIES/FRAMEWORKS**\n- Tolman's (1948) conception of a cognitive map as organizing experience and guiding behavior.\n- Schemas and memory consolidation (Tse et al., 2007).\n- Elements of episodic memory by Tulving (1983).\n\n**CONCRETE EXAMPLES**\n1. London taxi drivers had larger hippocampi due to knowledge of London's layout (Maguire et al., 2000).\n2. Hippocampal activation tracked social space dimensions during a social role-playing game (Tavares et al., 2015).\n3. Professional piano tuners had larger hippocampal gray matter as a function of years of piano tuning (Teki et al., 2012)."
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
   }
 ]

@@ -19,7 +19,11 @@
         }
         
         .container {
+<<<<<<< HEAD
             max-width: 900px;
+=======
+            max-width: 1000px;
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             margin: 0 auto;
         }
         
@@ -75,6 +79,7 @@
             display: none;
         }
         
+<<<<<<< HEAD
         .btn {
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             color: white;
@@ -96,6 +101,8 @@
             cursor: not-allowed;
         }
         
+=======
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
         .loading {
             text-align: center;
             padding: 2rem;
@@ -121,6 +128,7 @@
             margin-top: 2rem;
         }
         
+<<<<<<< HEAD
         .section {
             margin-bottom: 1.5rem;
         }
@@ -136,6 +144,21 @@
         .section-content {
             color: #333;
             line-height: 1.8;
+=======
+        .primer-content {
+            color: #333;
+            line-height: 1.8;
+            white-space: pre-wrap;
+            font-size: 1rem;
+        }
+        
+        .primer-content strong {
+            color: #667eea;
+            display: block;
+            margin-top: 1.5rem;
+            margin-bottom: 0.5rem;
+            font-size: 1.1rem;
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
         }
         
         .papers-list {
@@ -179,28 +202,45 @@
 <body>
     <div class="container">
         <div class="header">
+<<<<<<< HEAD
             <h1>📚 Scientific Paper Summarizer</h1>
             <p>Upload a PDF and get an instant factual summary</p>
+=======
+            <h1>📚 Academic Paper Primer</h1>
+            <p>Get a comprehensive overview of any academic paper</p>
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
         </div>
         
         <div class="card">
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">📄</div>
                 <h3>Drop your PDF here or click to browse</h3>
+<<<<<<< HEAD
                 <p style="margin-top: 0.5rem; color: #666;">Supports scientific papers in PDF format</p>
+=======
+                <p style="margin-top: 0.5rem; color: #666;">Works for any academic paper - science, humanities, theory</p>
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
                 <input type="file" id="fileInput" accept=".pdf">
             </div>
             
             <div id="loading" class="loading" style="display: none;">
                 <div class="spinner"></div>
+<<<<<<< HEAD
                 <p>Processing your paper... This may take 1-2 minutes</p>
+=======
+                <p>Generating your primer... This takes 30-60 seconds</p>
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             </div>
             
             <div id="error" class="error" style="display: none;"></div>
             
             <div id="summary" class="summary" style="display: none;">
                 <h2 id="paperTitle" style="margin-bottom: 1rem; color: #333;"></h2>
+<<<<<<< HEAD
                 <div id="sections"></div>
+=======
+                <div id="primerContent" class="primer-content"></div>
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             </div>
         </div>
         
@@ -219,7 +259,11 @@
         const error = document.getElementById('error');
         const summary = document.getElementById('summary');
         const paperTitle = document.getElementById('paperTitle');
+<<<<<<< HEAD
         const sections = document.getElementById('sections');
+=======
+        const primerContent = document.getElementById('primerContent');
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
         const papersList = document.getElementById('papersList');
         
         // Click to upload
@@ -273,16 +317,27 @@
                 }
                 
                 const data = await response.json();
+<<<<<<< HEAD
                 displaySummary(data);
                 loadPapers(); // Refresh papers list
             } catch (err) {
                 showError('Error processing PDF. Please try again.');
                 console.error(err);
             } finally {
+=======
+                
+                // Poll for completion
+                pollForResult(data.paper_id);
+                
+            } catch (err) {
+                showError('Error processing PDF. Please try again.');
+                console.error(err);
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
                 loading.style.display = 'none';
             }
         }
         
+<<<<<<< HEAD
         function displaySummary(data) {
             paperTitle.textContent = data.title;
             sections.innerHTML = '';
@@ -304,6 +359,78 @@
             summary.style.display = 'block';
         }
         
+=======
+        async function pollForResult(paperId) {
+            const maxAttempts = 60; // 60 attempts = 5 minutes
+            let attempts = 0;
+            
+            const poll = setInterval(async () => {
+                attempts++;
+                
+                if (attempts > maxAttempts) {
+                    clearInterval(poll);
+                    showError('Processing timeout. Please try again.');
+                    loading.style.display = 'none';
+                    return;
+                }
+                
+                try {
+                    const response = await fetch(`${API_URL}/papers/${paperId}?t=${Date.now()}`);
+                    const paper = await response.json();
+                    
+                    if (paper.status === 'complete') {
+                        clearInterval(poll);
+                        displayPrimer(paper);
+                        loadPapers(); // Refresh list
+                        loading.style.display = 'none';
+                    } else if (paper.status === 'failed') {
+                        clearInterval(poll);
+                        showError('Processing failed: ' + (paper.error || 'Unknown error'));
+                        loading.style.display = 'none';
+                    }
+                    
+                } catch (err) {
+                    console.error('Poll error:', err);
+                }
+                
+            }, 5000); // Check every 5 seconds
+        }
+        
+        function displayPrimer(paper) {
+            paperTitle.textContent = paper.title;
+            
+            // Get the primer text
+            let primerText = paper.primer;
+            
+            // Fallback to sections.primer if primer field doesn't exist
+            if (!primerText && paper.sections && paper.sections.primer) {
+                primerText = paper.sections.primer;
+            }
+            
+            if (!primerText) {
+                primerText = "No primer generated. Please try again.";
+            }
+            
+            // Display with preserved formatting
+            primerContent.innerHTML = formatPrimer(primerText);
+            
+            summary.style.display = 'block';
+        }
+        
+        function formatPrimer(text) {
+            // Convert markdown-style bold to HTML
+            text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
+            
+            // Convert bullet points
+            text = text.replace(/^• /gm, '&nbsp;&nbsp;• ');
+            
+            // Add some spacing
+            text = text.replace(/\n\n/g, '\n\n');
+            
+            return text;
+        }
+        
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
         function showError(message) {
             error.textContent = message;
             error.style.display = 'block';
@@ -334,8 +461,21 @@
             try {
                 const response = await fetch(`${API_URL}/papers/${id}`);
                 const paper = await response.json();
+<<<<<<< HEAD
                 displaySummary(paper);
                 window.scrollTo({ top: 0, behavior: 'smooth' });
+=======
+                
+                if (paper.status === 'complete') {
+                    displayPrimer(paper);
+                    window.scrollTo({ top: 0, behavior: 'smooth' });
+                } else if (paper.status === 'processing') {
+                    showError('This paper is still being processed...');
+                    pollForResult(id);
+                } else {
+                    showError('Paper failed to process: ' + (paper.error || 'Unknown error'));
+                }
+>>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             } catch (err) {
                 showError('Error loading paper');
             }
