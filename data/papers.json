@@ -1,0 +1,42 @@
+[
+  {
+    "id": "paper_1762467501148",
+    "title": "Daniela Schiller - 2015",
+    "filename": "Daniela Schiller - 2015.pdf",
+    "upload_date": "2025-11-06T14:18:21.148803",
+    "sections": {
+      "abstract": "Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract \u201cspace\u201d supported by the hippocampus that parallels the organization of physical space is the organization of memories in time.",
+      "introduction": "One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain\u2019s capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.",
+      "results": "Schiller et al. \u2022 Hippocampus as a Multidimensional Cognitive Map J. Neurosci., October 14, 2015 \u2022 35(41):13904\u201313911. The cognitive map supported by place cells is generally conceived as a Euclidean map from the world-centered (allocentric) view. However, recent recording studies in monkeys have revealed the existence of grid cells in the medial entorhinal cortex that fire associated with locations of objects on a screen.",
+      "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights considerable evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) The experiments discussed here support the idea that the hippocampus embodies each of these properties."
+    },
+    "model": "facebook/bart-large-cnn"
+  },
+  {
+    "id": "paper_1762467643761",
+    "title": "Technical aspects of EEG _ MedLink Neurology",
+    "filename": "Technical aspects of EEG _ MedLink Neurology.pdf",
+    "upload_date": "2025-11-06T14:20:43.762077",
+    "sections": {
+      "introduction": "Since the first EEG recordings by Hans Berger in the 1920s, the electroencephalogram(EEG) has remained a pivotal diagnostic tool. To ensure the accuracy of the recording where very low amplitude electrophysiological potentials are encountered, the technical aspects of recording are important to understand and maintain.",
+      "methods": "Describe the participants/subjects, design, and main procedures. (2-4 sentences) Instrumentation includes all components that connect the patient to the EEG machine. There is potential to encounter interference or noise from outside sources that produce artifactual signals.",
+      "results": "Reviewing EEG for interpretation is typically conducted at the hospital or clinic where the EEG laboratory is located. Advances in computer science and internet technology with faster broadband connections and networking have enabled remote access to EEG. advances in digital EEG have allowed the electroencephalographer to reformat the record post hoc for greater flexibility during interpretation.",
+      "discussion": "This patient was \u201cundiagnosed\u2019 with epilepsy and instead diagnosed with neurocardiogenic syncope after cardiology evaluation. She was tapered off valproate and given instructions for syncope prevention. Fortunately, syncope did not recur with conservative treatment, and she has been event-free off antiseizure medication.",
+      "conclusion": "Summarize the main conclusions. An interpretation of the follow-up interictal EEG was performed. A 1-second burst of 4.5 Hz pseudo-generalized spike-andwaves (red arrows) due to superimposition of myogenic and eye flutter artifact."
+    },
+    "model": "facebook/bart-large-cnn"
+  },
+  {
+    "id": "paper_1762473718146",
+    "title": "Daniela Schiller - 2015",
+    "filename": "Daniela Schiller - 2015.pdf",
+    "upload_date": "2025-11-06T16:01:58.147279",
+    "sections": {
+      "abstract": "Theories of episodic memory emphasize the idea that memories are represented in a specific temporal as well as spatial context. Numerous studies have revealed that the hippocampus plays a critical role in remembering the order of events in specific experiences. The most straightforward example of an abstract \u201cspace\u201d supported by the hippocampus that parallels the organization of physical space is the organization of memories in time.",
+      "introduction": "One view argues that the hippocampus is critical for memory: our ability to retrieve both specific experiences and general knowledge gained from them. The other sees the hippocampus as the hub of a navigation system, supporting the brain\u2019s capacity to calculate routes for traversing physical space. Consensus between the memory and spatial views has been difficult because of differences in the species and approaches used.",
+      "results": "Schiller et al. \u2022 Hippocampus as a Multidimensional Cognitive Map J. Neurosci., October 14, 2015 \u2022 35(41):13904\u201313911. The cognitive map supported by place cells is generally conceived as a Euclidean map from the world-centered (allocentric) view. However, recent recording studies in monkeys have revealed the existence of grid cells in the medial entorhinal cortex that fire associated with locations of objects on a screen.",
+      "conclusion": "A recent perspective asked whether we can reconcile the memory and spatial views of hippocampal function (Eichenbaum and Cohen, 2014) Here, our brief review highlights considerable evidence that supports reconciliation of these views by adoption of the perspective of cognitive maps as originally conceived by Tolman (1948) The experiments discussed here support the idea that the hippocampus embodies each of these properties."
+    },
+    "model": "facebook/bart-large-cnn"
+  }
+]

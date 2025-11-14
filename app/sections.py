@@ -55,21 +55,20 @@ def split_into_sections(text: str) -> dict:
     """
     Split paper text into sections based on headers.
     Returns dict mapping canonical section names to their text content.
-    
-    This version handles PDFs where sections are embedded in running text
-    (not on separate lines).
     """
     text = _preclean(text)
     
-    # Build pattern that finds section headers even when embedded in text
-    # Look for: "Introduction" followed by uppercase letter or sentence
-    # Examples: "IntroductionThe hippocampus", "Introduction The hippocampus"
+    # First, remove references section and everything after
+    refs_match = re.search(r'\n\s*References\s*\n', text, re.IGNORECASE)
+    if refs_match:
+        text = text[:refs_match.start()]
     
+    # Build pattern that finds section headers even when embedded in text
     all_section_words = []
     for aliases in SECTION_ALIASES.values():
         all_section_words.extend(aliases)
     
-    # Create pattern for each section type
+    # Create patterns for each section type
     patterns = []
     
     # Pattern 1: Section name at start of line (traditional)
@@ -80,11 +79,10 @@ def split_into_sections(text: str) -> dict:
         )
     )
     
-    # Pattern 2: Section name embedded in text (for PDFs with no line breaks)
-    # Look for section name followed by capital letter (start of sentence)
+    # Pattern 2: Section name embedded in text
     patterns.append(
         re.compile(
-            r'\b(' + '|'.join(re.escape(w) for w in all_section_words) + r')(?:\.|:)?\s*[A-Z]',
+            r'\b(' + '|'.join(re.escape(w) for w in all_section_words) + r')(?:\.|:)?\s+[A-Z]',
             re.IGNORECASE
         )
     )
@@ -121,15 +119,13 @@ def split_into_sections(text: str) -> dict:
         # Extract content
         content = text[header_end:end].strip()
         
-        # For embedded headers, we might catch the first word of the section
-        # Clean it up by ensuring we start with a capital letter
+        # For embedded headers, ensure we start with a capital letter
         if content and not content[0].isupper():
-            # Find first sentence start
             match = re.search(r'[A-Z]', content)
             if match:
                 content = content[match.start():]
         
-        # Only add if we have substantial content (at least 200 chars)
+        # Only add if we have substantial content (200+ chars)
         if len(content) > 200:
             # Keep first occurrence of each section
             if name not in sections:
