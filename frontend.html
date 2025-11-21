@@ -1,383 +1,396 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Scientific Paper Summarizer</title>
+    <title>Academic Paper Primer</title>
     <style>
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
         }
-        
+
         body {
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
             background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
             min-height: 100vh;
             padding: 2rem;
         }
-        
+
         .container {
-<<<<<<< HEAD
-            max-width: 900px;
-=======
             max-width: 1000px;
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             margin: 0 auto;
         }
-        
+
         .header {
             text-align: center;
             color: white;
             margin-bottom: 3rem;
+            animation: fadeIn 0.6s ease-out;
         }
-        
+
         .header h1 {
             font-size: 2.5rem;
             margin-bottom: 0.5rem;
+            font-weight: 700;
         }
-        
+
         .header p {
             font-size: 1.1rem;
-            opacity: 0.9;
+            opacity: 0.95;
         }
-        
+
         .card {
             background: white;
-            border-radius: 12px;
-            padding: 2rem;
-            box-shadow: 0 20px 60px rgba(0,0,0,0.3);
+            border-radius: 16px;
+            padding: 2.5rem;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
             margin-bottom: 2rem;
+            animation: slideUp 0.6s ease-out;
         }
-        
+
         .upload-area {
             border: 3px dashed #667eea;
-            border-radius: 8px;
+            border-radius: 12px;
             padding: 3rem 2rem;
             text-align: center;
             cursor: pointer;
-            transition: all 0.3s;
+            transition: all 0.3s ease;
+            background: #fafbff;
         }
-        
+
         .upload-area:hover {
             border-color: #764ba2;
-            background: #f8f9ff;
-        }
-        
-        .upload-area.dragover {
             background: #f0f4ff;
+            transform: translateY(-2px);
+        }
+
+        .upload-area.dragover {
+            background: #e8edff;
             border-color: #764ba2;
+            border-width: 4px;
         }
-        
+
         .upload-icon {
-            font-size: 3rem;
+            font-size: 3.5rem;
             margin-bottom: 1rem;
+            animation: bounce 2s infinite;
         }
-        
+
+        .upload-area h3 {
+            color: #333;
+            font-size: 1.3rem;
+            margin-bottom: 0.5rem;
+        }
+
+        .upload-area p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
         input[type="file"] {
             display: none;
         }
-        
-<<<<<<< HEAD
-        .btn {
-            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
-            color: white;
-            border: none;
-            padding: 1rem 2rem;
-            border-radius: 8px;
-            font-size: 1rem;
-            font-weight: 600;
-            cursor: pointer;
-            transition: transform 0.2s;
-        }
-        
-        .btn:hover {
-            transform: translateY(-2px);
-        }
-        
-        .btn:disabled {
-            opacity: 0.6;
-            cursor: not-allowed;
-        }
-        
-=======
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
+
         .loading {
             text-align: center;
             padding: 2rem;
             color: #667eea;
         }
-        
+
         .spinner {
             border: 4px solid #f3f3f3;
             border-top: 4px solid #667eea;
             border-radius: 50%;
-            width: 40px;
-            height: 40px;
+            width: 50px;
+            height: 50px;
             animation: spin 1s linear infinite;
             margin: 1rem auto;
         }
-        
+
         @keyframes spin {
-            0% { transform: rotate(0deg); }
-            100% { transform: rotate(360deg); }
+            0% {
+                transform: rotate(0deg);
+            }
+
+            100% {
+                transform: rotate(360deg);
+            }
         }
-        
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        @keyframes slideUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes bounce {
+
+            0%,
+            100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+
         .summary {
             margin-top: 2rem;
         }
-        
-<<<<<<< HEAD
-        .section {
-            margin-bottom: 1.5rem;
-        }
-        
-        .section-title {
-            color: #667eea;
-            font-size: 1.3rem;
-            font-weight: 600;
-            margin-bottom: 0.5rem;
-            text-transform: capitalize;
-        }
-        
-        .section-content {
-            color: #333;
-            line-height: 1.8;
-=======
+
         .primer-content {
             color: #333;
             line-height: 1.8;
             white-space: pre-wrap;
             font-size: 1rem;
         }
-        
+
         .primer-content strong {
             color: #667eea;
             display: block;
             margin-top: 1.5rem;
             margin-bottom: 0.5rem;
-            font-size: 1.1rem;
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
+            font-size: 1.2rem;
         }
-        
+
         .papers-list {
-            margin-top: 2rem;
+            margin-top: 1.5rem;
         }
-        
+
         .paper-item {
             background: #f8f9ff;
-            padding: 1rem;
-            border-radius: 8px;
+            padding: 1.2rem;
+            border-radius: 10px;
             margin-bottom: 1rem;
             cursor: pointer;
-            transition: all 0.2s;
+            transition: all 0.3s ease;
+            border-left: 4px solid #667eea;
         }
-        
+
         .paper-item:hover {
             background: #f0f4ff;
-            transform: translateX(5px);
+            transform: translateX(8px);
+            box-shadow: 0 4px 12px rgba(102, 126, 234, 0.15);
         }
-        
+
         .paper-title {
             font-weight: 600;
             color: #667eea;
-            margin-bottom: 0.3rem;
+            margin-bottom: 0.4rem;
+            font-size: 1.05rem;
         }
-        
+
         .paper-date {
             font-size: 0.9rem;
             color: #666;
         }
-        
+
+        .paper-status {
+            display: inline-block;
+            padding: 0.25rem 0.75rem;
+            border-radius: 12px;
+            font-size: 0.8rem;
+            font-weight: 600;
+            margin-top: 0.5rem;
+        }
+
+        .status-complete {
+            background: #d4edda;
+            color: #155724;
+        }
+
+        .status-processing {
+            background: #fff3cd;
+            color: #856404;
+        }
+
+        .status-failed {
+            background: #f8d7da;
+            color: #721c24;
+        }
+
         .error {
             background: #fee;
             color: #c33;
             padding: 1rem;
             border-radius: 8px;
             margin-bottom: 1rem;
+            border-left: 4px solid #c33;
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 1.8rem;
+        }
+
+        #paperTitle {
+            color: #667eea;
+            font-size: 1.6rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .empty-state {
+            text-align: center;
+            padding: 2rem;
+            color: #999;
+        }
+
+        .empty-state-icon {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+            opacity: 0.5;
         }
     </style>
 </head>
+
 <body>
     <div class="container">
         <div class="header">
-<<<<<<< HEAD
-            <h1>📚 Scientific Paper Summarizer</h1>
-            <p>Upload a PDF and get an instant factual summary</p>
-=======
             <h1>📚 Academic Paper Primer</h1>
-            <p>Get a comprehensive overview of any academic paper</p>
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
+            <p>Get a comprehensive overview of any academic paper in minutes</p>
         </div>
-        
+
         <div class="card">
             <div class="upload-area" id="uploadArea">
                 <div class="upload-icon">📄</div>
                 <h3>Drop your PDF here or click to browse</h3>
-<<<<<<< HEAD
-                <p style="margin-top: 0.5rem; color: #666;">Supports scientific papers in PDF format</p>
-=======
-                <p style="margin-top: 0.5rem; color: #666;">Works for any academic paper - science, humanities, theory</p>
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
+                <p>Works for any academic paper - science, humanities, theory</p>
                 <input type="file" id="fileInput" accept=".pdf">
             </div>
-            
+
             <div id="loading" class="loading" style="display: none;">
                 <div class="spinner"></div>
-<<<<<<< HEAD
-                <p>Processing your paper... This may take 1-2 minutes</p>
-=======
-                <p>Generating your primer... This takes 30-60 seconds</p>
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
+                <p><strong>Generating your primer...</strong></p>
+                <p style="margin-top: 0.5rem; font-size: 0.9rem;">This takes 30-60 seconds</p>
             </div>
-            
+
             <div id="error" class="error" style="display: none;"></div>
-            
+
             <div id="summary" class="summary" style="display: none;">
-                <h2 id="paperTitle" style="margin-bottom: 1rem; color: #333;"></h2>
-<<<<<<< HEAD
-                <div id="sections"></div>
-=======
+                <h2 id="paperTitle"></h2>
                 <div id="primerContent" class="primer-content"></div>
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             </div>
         </div>
-        
+
         <div class="card">
-            <h2 style="margin-bottom: 1rem; color: #333;">📖 Previous Papers</h2>
-            <div id="papersList"></div>
+            <h2>📖 Previous Papers</h2>
+            <div id="papersList" class="papers-list"></div>
         </div>
     </div>
-    
+
     <script>
         const API_URL = 'http://localhost:8000/api';
-        
+
         const uploadArea = document.getElementById('uploadArea');
         const fileInput = document.getElementById('fileInput');
         const loading = document.getElementById('loading');
         const error = document.getElementById('error');
         const summary = document.getElementById('summary');
         const paperTitle = document.getElementById('paperTitle');
-<<<<<<< HEAD
-        const sections = document.getElementById('sections');
-=======
         const primerContent = document.getElementById('primerContent');
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
         const papersList = document.getElementById('papersList');
-        
+
         // Click to upload
         uploadArea.addEventListener('click', () => fileInput.click());
-        
+
         // Drag and drop
         uploadArea.addEventListener('dragover', (e) => {
             e.preventDefault();
             uploadArea.classList.add('dragover');
         });
-        
+
         uploadArea.addEventListener('dragleave', () => {
             uploadArea.classList.remove('dragover');
         });
-        
+
         uploadArea.addEventListener('drop', (e) => {
             e.preventDefault();
             uploadArea.classList.remove('dragover');
             const file = e.dataTransfer.files[0];
             if (file) handleFile(file);
         });
-        
+
         // File input change
         fileInput.addEventListener('change', (e) => {
             const file = e.target.files[0];
             if (file) handleFile(file);
         });
-        
+
         async function handleFile(file) {
             if (!file.name.toLowerCase().endsWith('.pdf')) {
                 showError('Please upload a PDF file');
                 return;
             }
-            
+
             // Hide previous results
             error.style.display = 'none';
             summary.style.display = 'none';
             loading.style.display = 'block';
-            
+
             const formData = new FormData();
             formData.append('file', file);
-            
+
             try {
                 const response = await fetch(`${API_URL}/upload`, {
                     method: 'POST',
                     body: formData
                 });
-                
+
                 if (!response.ok) {
                     throw new Error('Upload failed');
                 }
-                
+
                 const data = await response.json();
-<<<<<<< HEAD
-                displaySummary(data);
-                loadPapers(); // Refresh papers list
-            } catch (err) {
-                showError('Error processing PDF. Please try again.');
-                console.error(err);
-            } finally {
-=======
-                
+
                 // Poll for completion
                 pollForResult(data.paper_id);
-                
+
             } catch (err) {
                 showError('Error processing PDF. Please try again.');
                 console.error(err);
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
                 loading.style.display = 'none';
             }
         }
-        
-<<<<<<< HEAD
-        function displaySummary(data) {
-            paperTitle.textContent = data.title;
-            sections.innerHTML = '';
-            
-            const order = ['abstract', 'introduction', 'methods', 'results', 'discussion', 'conclusion'];
-            
-            for (const name of order) {
-                if (data.sections[name]) {
-                    const div = document.createElement('div');
-                    div.className = 'section';
-                    div.innerHTML = `
-                        <div class="section-title">${name}</div>
-                        <div class="section-content">${data.sections[name]}</div>
-                    `;
-                    sections.appendChild(div);
-                }
-            }
-            
-            summary.style.display = 'block';
-        }
-        
-=======
+
         async function pollForResult(paperId) {
             const maxAttempts = 60; // 60 attempts = 5 minutes
             let attempts = 0;
-            
+
             const poll = setInterval(async () => {
                 attempts++;
-                
+
                 if (attempts > maxAttempts) {
                     clearInterval(poll);
                     showError('Processing timeout. Please try again.');
                     loading.style.display = 'none';
                     return;
                 }
-                
+
                 try {
                     const response = await fetch(`${API_URL}/papers/${paperId}?t=${Date.now()}`);
                     const paper = await response.json();
-                    
+
                     if (paper.status === 'complete') {
                         clearInterval(poll);
                         displayPrimer(paper);
@@ -388,101 +401,116 @@
                         showError('Processing failed: ' + (paper.error || 'Unknown error'));
                         loading.style.display = 'none';
                     }
-                    
+
                 } catch (err) {
                     console.error('Poll error:', err);
                 }
-                
+
             }, 5000); // Check every 5 seconds
         }
-        
+
         function displayPrimer(paper) {
             paperTitle.textContent = paper.title;
-            
+
             // Get the primer text
             let primerText = paper.primer;
-            
+
             // Fallback to sections.primer if primer field doesn't exist
             if (!primerText && paper.sections && paper.sections.primer) {
                 primerText = paper.sections.primer;
             }
-            
+
             if (!primerText) {
                 primerText = "No primer generated. Please try again.";
             }
-            
+
             // Display with preserved formatting
             primerContent.innerHTML = formatPrimer(primerText);
-            
+
             summary.style.display = 'block';
+
+            // Scroll to top
+            window.scrollTo({ top: 0, behavior: 'smooth' });
         }
-        
+
         function formatPrimer(text) {
             // Convert markdown-style bold to HTML
             text = text.replace(/\*\*(.*?)\*\*/g, '<strong>$1</strong>');
-            
+
             // Convert bullet points
             text = text.replace(/^• /gm, '&nbsp;&nbsp;• ');
-            
-            // Add some spacing
-            text = text.replace(/\n\n/g, '\n\n');
-            
+            text = text.replace(/^- /gm, '&nbsp;&nbsp;• ');
+
             return text;
         }
-        
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
+
         function showError(message) {
             error.textContent = message;
             error.style.display = 'block';
         }
-        
+
         async function loadPapers() {
             try {
                 const response = await fetch(`${API_URL}/papers`);
                 const papers = await response.json();
-                
+
                 if (papers.length === 0) {
-                    papersList.innerHTML = '<p style="color: #666;">No papers yet. Upload your first paper above!</p>';
+                    papersList.innerHTML = `
+                        <div class="empty-state">
+                            <div class="empty-state-icon">📭</div>
+                            <p>No papers yet. Upload your first paper above!</p>
+                        </div>
+                    `;
                     return;
                 }
-                
-                papersList.innerHTML = papers.reverse().map(paper => `
-                    <div class="paper-item" onclick="loadPaper('${paper.id}')">
-                        <div class="paper-title">${paper.title}</div>
-                        <div class="paper-date">${new Date(paper.upload_date).toLocaleDateString()}</div>
-                    </div>
-                `).join('');
+
+                papersList.innerHTML = papers.reverse().map(paper => {
+                    let statusClass = 'status-processing';
+                    let statusText = 'Processing';
+
+                    if (paper.status === 'complete') {
+                        statusClass = 'status-complete';
+                        statusText = 'Complete';
+                    } else if (paper.status === 'failed') {
+                        statusClass = 'status-failed';
+                        statusText = 'Failed';
+                    }
+
+                    return `
+                        <div class="paper-item" onclick="loadPaper('${paper.id}')">
+                            <div class="paper-title">${paper.title}</div>
+                            <div class="paper-date">${new Date(paper.upload_date).toLocaleDateString()}</div>
+                            <span class="paper-status ${statusClass}">${statusText}</span>
+                        </div>
+                    `;
+                }).join('');
             } catch (err) {
                 console.error('Error loading papers:', err);
             }
         }
-        
+
         async function loadPaper(id) {
             try {
                 const response = await fetch(`${API_URL}/papers/${id}`);
                 const paper = await response.json();
-<<<<<<< HEAD
-                displaySummary(paper);
-                window.scrollTo({ top: 0, behavior: 'smooth' });
-=======
-                
+
                 if (paper.status === 'complete') {
                     displayPrimer(paper);
-                    window.scrollTo({ top: 0, behavior: 'smooth' });
                 } else if (paper.status === 'processing') {
                     showError('This paper is still being processed...');
+                    loading.style.display = 'block';
                     pollForResult(id);
                 } else {
                     showError('Paper failed to process: ' + (paper.error || 'Unknown error'));
                 }
->>>>>>> cc37b8eedd7e37eb87a795787af8552c63b75407
             } catch (err) {
                 showError('Error loading paper');
             }
         }
-        
+
         // Load papers on page load
         loadPapers();
     </script>
 </body>
+
 </html>

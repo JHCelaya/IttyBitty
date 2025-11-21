@@ -1,23 +1,24 @@
-"""
-Universal Academic Primer Version
-Works for ANY type of academic paper - no section splitting
-"""
+import json
+import os
+import tempfile
+from datetime import datetime
+from pathlib import Path
+from typing import List, Optional
+
 from fastapi import FastAPI, UploadFile, File, HTTPException, BackgroundTasks
 from fastapi.middleware.cors import CORSMiddleware
-from pathlib import Path
-import tempfile
-import json
-from datetime import datetime
-import os
-import sys
+from fastapi.staticfiles import StaticFiles
+from dotenv import load_dotenv
 
-sys.path.insert(0, str(Path(__file__).parent.parent))
+from pdf_io import extract_text_by_page
 
-from app.pdf_io import extract_text_by_page
-# NOTE: We're NOT importing split_into_sections anymore!
+# Load environment variables
+load_dotenv()
 
-app = FastAPI(title="Paper Summarizer - Universal Primer")
+# Initialize FastAPI app
+app = FastAPI()
 
+# Add CORS
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -26,35 +27,34 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Config
-DATA_DIR = Path("data")
-DATA_DIR.mkdir(exist_ok=True)
-PAPERS_FILE = DATA_DIR / "papers.json"
+# Mount static files
+# Ensure static directory exists
+os.makedirs("static", exist_ok=True)
+app.mount("/static", StaticFiles(directory="static"), name="static")
 
-HF_API_KEY = os.getenv("HUGGINGFACE_API_KEY", "")
-OPENAI_API_KEY = os.getenv("OPENAI_API_KEY", "")
-
-# Use OpenAI if available, fallback to HF
+# Configuration
+OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
+HF_API_KEY = os.getenv("HF_API_KEY")
 USE_OPENAI = bool(OPENAI_API_KEY)
 
+PAPERS_FILE = Path("papers.json")
 if not PAPERS_FILE.exists():
     PAPERS_FILE.write_text("[]")
 
-# ============================================================================
 # IMPROVED MULTI-PASS PROMPT SYSTEM
 # ============================================================================
 
 # Pass 1: Extract concrete facts
 FACT_EXTRACTION_PROMPT = """
-Extract specific, concrete facts from this academic paper.
+Extract specific facts from the paper that support the main argument of the paper from its ABSTRACT.
 
 For each category, provide SPECIFIC details (not vague descriptions):
 
 **KEY TERMS & CONCEPTS**
-List 5-7 important terms/concepts with brief definitions. Example: "Time cells - hippocampal neurons that fire at specific moments rather than locations"
+List 7-8 important terms/concepts with brief definitions. Example: "Time cells - hippocampal neurons that fire at specific moments rather than locations"
 
 **SPECIFIC FINDINGS**
-List 3-5 concrete findings with details. Include numbers, measurements, or specific examples where mentioned.
+List 5-7 concrete findings with details. Include numbers, measurements, or specific statistical test results from paragraphs that are not the abstract, or conclusion.
 
 **NAMED THEORIES/FRAMEWORKS**
 What specific theories, models, or frameworks are discussed? Include author names and years.
@@ -84,13 +84,13 @@ EXTRACTED FACTS:
 Create a primer with these sections:
 
 **🎯 ONE-SENTENCE SUMMARY**
-[Max 30 words - capture the core argument with specific details]
+[Max 500 words - capture the core argument with specific details]
 
 **📖 THE ARGUMENT IN PLAIN LANGUAGE**
 [3-4 sentences explaining the main claim. Use specific terms from the facts above. Make it concrete and vivid.]
 
 **💡 WHY THIS MATTERS**
-[2-3 sentences on significance. What changes? What's new? Be specific about impact.]
+[350 words on significance. What changes? What's new? Be specific about impact.]
 
 **🔬 THE EVIDENCE**
 [4-5 sentences describing how they support their claim. Include:
